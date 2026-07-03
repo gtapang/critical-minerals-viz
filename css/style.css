@@ -9,20 +9,31 @@
   --radius: 8px;
 
   /* Node colors */
-  --color-company:  #58a6ff;
-  --color-country:  #f85149;
-  --color-mineral:  #3fb950;
-  --color-deposit:  #d29922;
+  --color-company:    #58a6ff;
+  --color-country:     #f85149;
+  --color-mineral:     #3fb950;
+  --color-deposit:     #d29922;
+  --color-person:      #db61a8;
+  --color-regulatory:  #ff8c00;
 
   /* Link colors */
-  --link-ownership:    #e3b341;
-  --link-jv:           #39c5cf;
-  --link-offtake:      #bc8cff;
-  --link-supply:       #8b949e;
-  --link-produces:     #3fb950;
-  --link-headquartered:#f85149;
-  --link-regulates:    #ff7b72;
-  --link-competes:     #d2a8ff;
+  --link-member_of:      #58a6ff;
+  --link-controls:       #ff8c00;
+  --link-partner:        #39c5cf;
+  --link-competes:       #d2a8ff;
+  --link-produces:       #3fb950;
+  --link-secures:        #bc8cff;
+  --link-founded:        #e3b341;
+  --link-chairs:         #ffa657;
+  --link-located_in:     #8b949e;
+  --link-operates:       #f0883e;
+  --link-processes:      #56d4dd;
+  --link-supply:         #79c0ff;
+  --link-processed_into: #a371f7;
+  --link-offtake:        #bc8cff;
+  --link-equity:         #e3b341;
+  --link-sanctions:      #ff7b72;
+  --link-recycles:       #3fb950;
 }
 
 * { box-sizing: border-box; }
@@ -59,20 +70,31 @@ body {
 }
 
 /* Node fill by type */
-.node-company  { fill: var(--color-company);  }
-.node-country  { fill: var(--color-country);  }
-.node-mineral  { fill: var(--color-mineral);  }
-.node-deposit  { fill: var(--color-deposit);  }
+.node-company     { fill: var(--color-company); }
+.node-country     { fill: var(--color-country); }
+.node-mineral     { fill: var(--color-mineral); }
+.node-deposit     { fill: var(--color-deposit); }
+.node-person      { fill: var(--color-person); }
+.node-regulatory  { fill: var(--color-regulatory); }
 
 /* Link stroke by type */
-.link-ownership     { stroke: var(--link-ownership); }
-.link-jv            { stroke: var(--link-jv);          stroke-dasharray: 6 3; }
-.link-offtake       { stroke: var(--link-offtake);     stroke-dasharray: 2 3; }
-.link-supply        { stroke: var(--link-supply); }
-.link-produces      { stroke: var(--link-produces); }
-.link-headquartered { stroke: var(--link-headquartered); }
-.link-regulates     { stroke: var(--link-regulates); }
-.link-competes      { stroke: var(--link-competes); stroke-dasharray: 4 2; }
+.link-member_of      { stroke: var(--link-member_of); }
+.link-controls       { stroke: var(--link-controls); }
+.link-partner        { stroke: var(--link-partner); stroke-dasharray: 6 3; }
+.link-competes       { stroke: var(--link-competes); stroke-dasharray: 4 2; }
+.link-produces       { stroke: var(--link-produces); }
+.link-secures        { stroke: var(--link-secures); }
+.link-founded        { stroke: var(--link-founded); }
+.link-chairs         { stroke: var(--link-chairs); }
+.link-located_in     { stroke: var(--link-located_in); }
+.link-operates       { stroke: var(--link-operates); }
+.link-processes      { stroke: var(--link-processes); }
+.link-supply         { stroke: var(--link-supply); }
+.link-processed_into { stroke: var(--link-processed_into); stroke-dasharray: 2 3; }
+.link-offtake        { stroke: var(--link-offtake); stroke-dasharray: 2 3; }
+.link-equity         { stroke: var(--link-equity); }
+.link-sanctions      { stroke: var(--link-sanctions); }
+.link-recycles       { stroke: var(--link-recycles); }
 
 /* Links default */
 #graph svg .link {
