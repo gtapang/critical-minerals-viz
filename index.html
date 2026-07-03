@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>Critical Minerals Interlinks — Pax-Silica</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Graph container -->
+  <div id="graph"></div>
+
+  <!-- Title overlay -->
+  <div id="title-overlay">
+    <h1>Critical Minerals Interlinks — Pax-Silica</h1>
+    <p class="subtitle">Mapping the global dependencies and interconnections of critical minerals</p>
+  </div>
+
+  <!-- Controls container (populated by JS) -->
+  <div id="controls"></div>
+
+  <!-- Legend container (populated by JS) -->
+  <div id="legend"></div>
+
+  <!-- Detail side panel (hidden by default) -->
+  <div id="panel" class="hidden">
+    <button id="panel-close" aria-label="Close panel">&times;</button>
+    <div id="panel-content"></div>
+  </div>
+
+  <!-- D3.js v7 -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <!-- App logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
