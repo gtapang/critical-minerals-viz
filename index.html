@@ -1,44 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="dark">
-  <title>Critical Minerals Interlinks — Pax-Silica</title>
-  <link rel="stylesheet" href="css/style.css?v=3">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Pax-Silica — Critical Minerals Network</title>
+<style>
+/* ============================================================
+   Pax-Silica v4 — Critical Minerals Geopolitical Network
+   Dark theme, embedded (no external CSS files)
+   ============================================================ */
+
+:root {
+  --bg: #0d1117;
+  --text: #c9d1d9;
+  --panel-bg: rgba(22,27,34,0.97);
+  --overlay-bg: rgba(13,17,23,0.85);
+  --border: rgba(201,209,217,0.15);
+  --radius: 8px;
+
+  /* Node types */
+  --c-company:    #58a6ff;
+  --c-country:    #f85149;
+  --c-mineral:    #3fb950;
+  --c-deposit:    #d29922;
+  --c-person:     #db61a8;
+  --c-regulatory: #ff8c00;
+
+  /* Link types */
+  --l-member_of:      #58a6ff;
+  --l-controls:       #ff8c00;
+  --l-partner:        #39c5cf;
+  --l-competes:       #d2a8ff;
+  --l-produces:       #3fb950;
+  --l-secures:        #bc8cff;
+  --l-founded:        #e3b341;
+  --l-chairs:         #ffa657;
+  --l-located_in:     #8b949e;
+  --l-operates:       #f0883e;
+  --l-processes:      #56d4dd;
+  --l-supply:         #79c0ff;
+  --l-processed_into: #a371f7;
+  --l-offtake:        #bc8cff;
+  --l-equity:         #e3b341;
+  --l-sanctions:      #ff7b72;
+  --l-recycles:       #3fb950;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* ---- Graph view ---- */
+#graph, #sankey {
+  width: 100vw; height: 100vh;
+  position: absolute; top: 0; left: 0;
+  z-index: 1;
+}
+#graph svg, #sankey svg { width: 100%; height: 100%; display: block; }
+.hidden { display: none !important; }
+
+/* SVG elements */
+.node { stroke: var(--bg); stroke-width: 1.5; cursor: pointer; transition: opacity 0.2s; }
+.node-company    { fill: var(--c-company); }
+.node-country    { fill: var(--c-country); }
+.node-mineral    { fill: var(--c-mineral); }
+.node-deposit    { fill: var(--c-deposit); }
+.node-person     { fill: var(--c-person); }
+.node-regulatory { fill: var(--c-regulatory); }
+
+.link { stroke-opacity: 0.6; transition: stroke-opacity 0.2s; fill: none; }
+.link-member_of      { stroke: var(--l-member_of); }
+.link-controls       { stroke: var(--l-controls); }
+.link-partner        { stroke: var(--l-partner); stroke-dasharray: 6 3; }
+.link-competes       { stroke: var(--l-competes); stroke-dasharray: 4 2; }
+.link-produces       { stroke: var(--l-produces); }
+.link-secures        { stroke: var(--l-secures); }
+.link-founded        { stroke: var(--l-founded); }
+.link-chairs         { stroke: var(--l-chairs); }
+.link-located_in     { stroke: var(--l-located_in); }
+.link-operates       { stroke: var(--l-operates); }
+.link-processes      { stroke: var(--l-processes); }
+.link-supply         { stroke: var(--l-supply); }
+.link-processed_into { stroke: var(--l-processed_into); stroke-dasharray: 2 3; }
+.link-offtake        { stroke: var(--l-offtake); stroke-dasharray: 2 3; }
+.link-equity         { stroke: var(--l-equity); }
+.link-sanctions      { stroke: var(--l-sanctions); }
+.link-recycles       { stroke: var(--l-recycles); }
+
+text { font: 11px sans-serif; fill: var(--text); pointer-events: none; user-select: none; }
+.dimmed { opacity: 0.1 !important; }
+
+/* ---- Title ---- */
+#title-overlay {
+  position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+  z-index: 20; text-align: center;
+}
+#title-overlay h1 {
+  background: var(--overlay-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 5px 18px; margin: 0;
+  font-size: 14px; font-weight: 600; color: var(--text); white-space: nowrap;
+}
+
+/* ---- View toggle ---- */
+#view-toggle {
+  position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+  z-index: 20; margin-top: 36px;
+  background: rgba(88,166,255,0.2); border: 1px solid var(--c-company);
+  border-radius: var(--radius); color: #fff; padding: 5px 18px;
+  font-size: 13px; cursor: pointer; transition: background 0.2s;
+}
+#view-toggle:hover { background: rgba(88,166,255,0.35); }
+
+/* ---- Legend ---- */
+#legend {
+  position: fixed; top: 12px; left: 12px; z-index: 20;
+  background: var(--overlay-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 8px 12px; font-size: 11px;
+  display: grid; gap: 2px 14px; grid-template-columns: auto auto;
+  max-height: calc(100vh - 160px); overflow-y: auto;
+}
+#legend .section { grid-column: 1/-1; font-weight: 600; color: #8b949e;
+  text-transform: uppercase; font-size: 10px; letter-spacing: 0.5px; margin-top: 4px; }
+#legend .section:first-child { margin-top: 0; }
+#legend .swatch { display: inline-block; width: 10px; height: 10px;
+  border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+#legend .lswatch { display: inline-block; width: 16px; height: 0;
+  border-top: 2px solid; margin-right: 5px; vertical-align: middle; }
+
+/* ---- Controls (bottom) ---- */
+#controls {
+  position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%);
+  z-index: 20; background: var(--overlay-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 8px 10px;
+  display: flex; flex-wrap: wrap; gap: 4px; align-items: center;
+  max-width: 94vw; justify-content: center;
+}
+#controls .clabel { font-size: 10px; color: #8b949e; margin: 0 2px;
+  text-transform: uppercase; letter-spacing: 0.3px; }
+#controls button {
+  border: 1px solid var(--border); border-radius: 999px;
+  padding: 3px 11px; font-size: 11px; color: var(--text);
+  background: rgba(139,148,158,0.12); cursor: pointer;
+  transition: background 0.2s, border-color 0.2s; white-space: nowrap;
+}
+#controls button:hover { background: rgba(139,148,158,0.28); }
+#controls button.active { background: rgba(88,166,255,0.2); border-color: var(--c-company); color: #fff; }
+#controls button:not(.active) { opacity: 0.45; }
+#controls input[type="search"] {
+  background: rgba(13,17,23,0.8); border: 1px solid var(--border);
+  border-radius: 999px; padding: 3px 10px; font-size: 11px;
+  color: var(--text); outline: none; width: 120px; margin-left: 6px;
+}
+#controls input[type="search"]::placeholder { color: #6e7681; }
+#controls input[type="search"]:focus { border-color: var(--c-company); }
+
+/* ---- Side panel ---- */
+#panel {
+  position: fixed; top: 0; right: 0; width: 340px; height: 100vh;
+  background: var(--panel-bg); border-left: 1px solid var(--border);
+  padding: 18px; overflow-y: auto; z-index: 30;
+  transform: translateX(100%); transition: transform 0.3s ease;
+}
+#panel.active { transform: translateX(0); }
+#panel-close {
+  position: absolute; top: 10px; right: 10px;
+  background: none; border: 1px solid var(--border); border-radius: 4px;
+  color: var(--text); font-size: 16px; width: 28px; height: 28px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  line-height: 1;
+}
+#panel h2 { margin: 0 0 12px; font-size: 15px; padding-right: 32px; }
+.field { margin-bottom: 10px; }
+.field-label { color: #8b949e; font-size: 10px; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 1px; }
+.field-value { font-size: 13px; color: var(--text); }
+.flag-chip { display: inline-block; font-size: 9px; padding: 1px 6px; border-radius: 4px;
+  background: #30363d; margin-right: 3px; margin-bottom: 2px; }
+.connections { margin-top: 14px; }
+.connections h3 { font-size: 11px; color: #8b949e; text-transform: uppercase; margin-bottom: 8px; }
+.conn-item { padding: 5px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+.conn-type { display: inline-block; font-size: 9px; text-transform: uppercase; padding: 1px 5px;
+  border-radius: 3px; margin-right: 5px; color: #fff; }
+
+/* ---- Sankey ---- */
+.sankey-node rect { fill-opacity: 0.9; stroke: var(--bg); stroke-width: 1; cursor: pointer; transition: fill-opacity 0.2s; }
+.sankey-node rect:hover { fill-opacity: 1; }
+.sankey-node text { font: 11px sans-serif; fill: var(--text); }
+.sankey-link { fill: none; stroke-opacity: 0.3; transition: stroke-opacity 0.2s; }
+.sankey-link:hover { stroke-opacity: 0.55; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  #panel { top: auto; bottom: 0; left: 0; width: 100%; height: 60vh;
+    transform: translateY(100%); border-left: none; border-top: 1px solid var(--border);
+    border-radius: var(--radius) var(--radius) 0 0; }
+  #panel.active { transform: translateY(0); }
+  #legend { font-size: 10px; padding: 5px 8px; }
+  #title-overlay h1 { font-size: 12px; padding: 4px 12px; }
+  #graph text { font-size: 9px; }
+}
+</style>
 </head>
 <body>
-  <!-- Graph container -->
-  <div id="graph"></div>
 
-  <!-- Title overlay -->
-  <div id="title-overlay">
-    <h1>Critical Minerals Interlinks — Pax-Silica</h1>
-    <p class="subtitle">Mapping the global dependencies and interconnections of critical minerals</p>
-  </div>
+<div id="graph"></div>
+<div id="sankey" class="hidden"></div>
 
-  <!-- Controls container (populated by JS) -->
-  <div id="controls"></div>
+<div id="title-overlay"><h1>Pax-Silica — Critical Minerals</h1></div>
+<button id="view-toggle">Sankey Flow</button>
 
-  <!-- View toggle button -->
-  <button id="view-toggle-btn">Switch to Sankey</button>
+<div id="legend"></div>
+<div id="controls"></div>
 
-  <!-- Sankey container (hidden by default) -->
-  <div id="sankey-container" class="hidden"></div>
+<div id="panel">
+  <button id="panel-close">&times;</button>
+  <div id="panel-content"></div>
+</div>
 
-  <!-- Legend container (populated by JS) -->
-  <div id="legend"></div>
-
-  <!-- Detail side panel (hidden by default) -->
-  <div id="panel" class="hidden">
-    <button id="panel-close" aria-label="Close panel">&times;</button>
-    <div id="panel-content"></div>
-  </div>
-
-  <!-- D3.js v7 -->
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
-  <!-- App logic -->
-  <script src="js/app.js?v=7"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+<script>
+// === PAX-SILICA v4 — Network Graph Application ===
+// JS loaded below via Task 2-5 push
+</script>
 </body>
 </html>
