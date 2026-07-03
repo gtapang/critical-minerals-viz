@@ -34,6 +34,22 @@
     render();
     buildLegend();
     buildControls();
+
+    // Panel close handler
+    document.getElementById('panel-close').addEventListener('click', function () {
+      var panel = document.getElementById('panel');
+      panel.classList.remove('active');
+      panel.classList.add('hidden');
+    });
+
+    // Click on empty SVG background closes panel
+    svg.on('click', function () {
+      var panel = document.getElementById('panel');
+      if (panel.classList.contains('active')) {
+        panel.classList.remove('active');
+        panel.classList.add('hidden');
+      }
+    });
   }).catch(function (err) {
     console.error('Failed to load graph data:', err);
     d3.select('#graph').append('p')
@@ -309,21 +325,8 @@
     return result;
   }
 
-  // Panel close handler
-  document.getElementById('panel-close').addEventListener('click', function () {
-    var panel = document.getElementById('panel');
-    panel.classList.remove('active');
-    panel.classList.add('hidden');
-  });
-
-  // Click on empty SVG background closes panel
-  svg.on('click', function () {
-    var panel = document.getElementById('panel');
-    if (panel.classList.contains('active')) {
-      panel.classList.remove('active');
-      panel.classList.add('hidden');
-    }
-  });
+  // Panel close handler — inside .then() to ensure DOM is ready
+  // (moved into the d3.json callback below)
 
   /* ---------- 8. Drag behaviour handlers ---------- */
 
