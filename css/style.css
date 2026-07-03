@@ -254,8 +254,9 @@ h1 {
 
 #controls {
   position: fixed;
-  top: 12px;
-  right: 12px;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--overlay-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -265,6 +266,8 @@ h1 {
   flex-wrap: wrap;
   gap: 6px;
   align-items: center;
+  max-width: 90vw;
+  justify-content: center;
 }
 
 #controls button {
@@ -431,9 +434,11 @@ h1 {
   }
 
   #controls {
-    top: auto;
     bottom: 12px;
-    right: 12px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: 95vw;
   }
 
   #controls input[type="search"] {
