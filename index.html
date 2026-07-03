@@ -473,19 +473,25 @@ function buildSankey(){
   var fl=links.filter(function(l){return FLOWTYPES[l.type];});
   var nset=new Set(); fl.forEach(function(l){nset.add(idOf(l.source));nset.add(idOf(l.target));});
   var skNodes=[], nm={};
-  nodes.forEach(function(n){ if(nset.has(n.id)){nm[n.id]=skNodes.length;skNodes.push({name:n.label,type:n.type,id:n.id,orig:n});} });
+  nodes.forEach(function(n){ if(nset.has(n.id)){nm[n.id]=skNodes.length;skNodes.push({name:n.label,type:n.type,id:n.id,orig:JSON.parse(JSON.stringify(n))});} });
   var skLinks=fl.map(function(l){
     var s=idOf(l.source),t=idOf(l.target);
+    if(nm[s]===undefined||nm[t]===undefined)return null;
     return {source:nm[s],target:nm[t],value:l.weight||5,type:l.type};
-  }).filter(function(l){return l.source!==undefined&&l.target!==undefined;});
+  }).filter(Boolean);
 
   var c=document.getElementById('sankey'), w=c.clientWidth, hh=c.clientHeight;
-  var skSvg=d3.select('#sankey').append('svg').attr('width',w).attr('height',hh);
+  if(!w||!hh){ w=window.innerWidth; hh=window.innerHeight; }
+
+  var skSvg=d3.select('#sankey').selectAll('svg').remove();
+  skSvg=d3.select('#sankey').append('svg').attr('width',w).attr('height',hh);
   var skG=skSvg.append('g');
   skSvg.call(d3.zoom().scaleExtent([0.05,8]).on('zoom',function(ev){skG.attr('transform',ev.transform);}));
 
+  if(!skNodes.length||!skLinks.length){ skG.append('text').attr('x',w/2).attr('y',hh/2).attr('text-anchor','middle').attr('fill','#8b949e').text('No flow data'); return; }
+
   var sankey=d3.sankey().nodeWidth(14).nodePadding(5).extent([[10,10],[w-110,hh-10]]);
-  var g2=sankey({nodes:skNodes.map(Object),links:skLinks.map(Object)});
+  var g2=sankey({nodes:skNodes.map(function(d){return Object.assign({},d);}),links:skLinks.map(function(d){return Object.assign({},d);})});
 
   skG.append('g').selectAll('path').data(g2.links).enter().append('path')
     .attr('class','sankey-link').attr('d',d3.sankeyLinkHorizontal())
@@ -503,10 +509,6 @@ function buildSankey(){
     .attr('y',function(d){return(d.y1-d.y0)/2;}).attr('dy','.35em').attr('text-anchor','start')
     .text(function(d){return d.name;})
     .filter(function(d){return d.x0>w/2;}).attr('x',-4).attr('text-anchor','end');
-
-  window.addEventListener('resize',function(){
-    skSvg.attr('width',c.clientWidth).attr('height',c.clientHeight);
-  });
 }
 
 // ---- View Toggle ----
