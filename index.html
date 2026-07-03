@@ -20,6 +20,15 @@
   <!-- Controls container (populated by JS) -->
   <div id="controls"></div>
 
+  <!-- View toggle -->
+  <div id="view-toggle">
+    <button id="btn-network" class="active">Network</button>
+    <button id="btn-sankey">Sankey</button>
+  </div>
+
+  <!-- Sankey container (hidden by default) -->
+  <div id="sankey-container" class="hidden"></div>
+
   <!-- Legend container (populated by JS) -->
   <div id="legend"></div>
 
@@ -31,7 +40,8 @@
 
   <!-- D3.js v7 -->
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
   <!-- App logic -->
-  <script src="js/app.js?v=4"></script>
+  <script src="js/app.js?v=5"></script>
 </body>
 </html>

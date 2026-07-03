@@ -493,4 +493,146 @@
            '</div><div class="panel-value">' + value + '</div></div>';
   }
 
+  /* ---------- 11. Sankey diagram ---------- */
+
+  var sankeyBuilt = false;
+
+  function initSankey() {
+    if (sankeyBuilt) return;
+    sankeyBuilt = true;
+
+    // Build Sankey from supply chain links: produces, supply, processes, processed_into, operates, offtake
+    var sanLinkTypes = new Set(['produces', 'supply', 'processes', 'processed_into', 'operates', 'offtake', 'secures', 'recycles']);
+
+    // Filter links relevant to flow
+    var flowLinks = links.filter(function (l) { return sanLinkTypes.has(l.type); });
+
+    // Build node set from filtered links
+    var nodeSet = new Set();
+    flowLinks.forEach(function (l) {
+      nodeSet.add(typeof l.source === 'object' ? l.source.id : l.source);
+      nodeSet.add(typeof l.target === 'object' ? l.target.id : l.target);
+    });
+
+    // Create sankey nodes
+    var skNodes = [];
+    var nodeMap = {};
+    nodes.forEach(function (n) {
+      if (nodeSet.has(n.id)) {
+        nodeMap[n.id] = skNodes.length;
+        skNodes.push({ name: n.label, type: n.type, id: n.id, orig: n });
+      }
+    });
+
+    // Create sankey links with weight as value
+    var skLinks = flowLinks.map(function (l) {
+      var s = typeof l.source === 'object' ? l.source.id : l.source;
+      var t = typeof l.target === 'object' ? l.target.id : l.target;
+      return {
+        source: nodeMap[s],
+        target: nodeMap[t],
+        value: l.weight || 5,
+        type: l.type
+      };
+    }).filter(function (l) {
+      return l.source !== undefined && l.target !== undefined;
+    });
+
+    var container = document.getElementById('sankey-container');
+    var w = container.clientWidth;
+    var h = container.clientHeight;
+
+    var skSvg = d3.select('#sankey-container').append('svg')
+      .attr('width', w).attr('height', h);
+
+    var skG = skSvg.append('g');
+
+    // Zoom
+    var zoom = d3.zoom()
+      .scaleExtent([0.1, 8])
+      .on('zoom', function (event) { skG.attr('transform', event.transform); });
+    skSvg.call(zoom);
+
+    var sankey = d3.sankey()
+      .nodeWidth(14)
+      .nodePadding(6)
+      .extent([[10, 10], [w - 110, h - 10]]);
+
+    var graph = sankey({
+      nodes: skNodes.map(function (d) { return Object.assign({}, d); }),
+      links: skLinks.map(function (d) { return Object.assign({}, d); })
+    });
+
+    var nodeColors = {
+      country: '#f85149', company: '#58a6ff', mineral: '#3fb950',
+      deposit: '#d29922', person: '#db61a8', regulatory: '#ff8c00'
+    };
+
+    // Links
+    var linkPath = skG.append('g').attr('class', 'sankey-links')
+      .selectAll('path')
+      .data(graph.links)
+      .enter().append('path')
+      .attr('class', 'sankey-link')
+      .attr('d', d3.sankeyLinkHorizontal())
+      .attr('stroke', function (d) { return LINK_COLORS[d.type] || '#8b949e'; })
+      .attr('stroke-width', function (d) { return Math.max(1, d.width); })
+      .on('mouseover', function () { d3.select(this).attr('stroke-opacity', 0.6); })
+      .on('mouseout', function () { d3.select(this).attr('stroke-opacity', 0.3); });
+
+    // Nodes
+    var node = skG.append('g').attr('class', 'sankey-nodes')
+      .selectAll('g')
+      .data(graph.nodes)
+      .enter().append('g')
+      .attr('class', 'sankey-node')
+      .attr('transform', function (d) { return 'translate(' + d.x0 + ',' + d.y0 + ')'; });
+
+    node.append('rect')
+      .attr('height', function (d) { return Math.max(1, d.y1 - d.y0); })
+      .attr('width', sankey.nodeWidth())
+      .attr('fill', function (d) { return nodeColors[d.type] || '#8b949e'; })
+      .on('click', function (event, d) {
+        event.stopPropagation();
+        showPanel(d.orig);
+      })
+      .append('title').text(function (d) { return d.name; });
+
+    node.append('text')
+      .attr('x', sankey.nodeWidth() + 4)
+      .attr('y', function (d) { return (d.y1 - d.y0) / 2; })
+      .attr('dy', '.35em')
+      .attr('text-anchor', 'start')
+      .text(function (d) { return d.name; })
+      .filter(function (d) { return d.x0 > w / 2; })
+      .attr('x', -4)
+      .attr('text-anchor', 'end');
+
+    // Responsive
+    window.addEventListener('resize', function () {
+      var nw = container.clientWidth, nh = container.clientHeight;
+      skSvg.attr('width', nw).attr('height', nh);
+    });
+  }
+
+  // View toggle handlers
+  document.getElementById('btn-network').addEventListener('click', function () {
+    document.getElementById('graph').classList.remove('hidden');
+    document.getElementById('sankey-container').classList.add('hidden');
+    document.getElementById('legend').classList.remove('hidden');
+    document.getElementById('controls').classList.remove('hidden');
+    this.classList.add('active');
+    document.getElementById('btn-sankey').classList.remove('active');
+  });
+
+  document.getElementById('btn-sankey').addEventListener('click', function () {
+    document.getElementById('graph').classList.add('hidden');
+    document.getElementById('sankey-container').classList.remove('hidden');
+    document.getElementById('legend').classList.add('hidden');
+    document.getElementById('controls').classList.add('hidden');
+    this.classList.add('active');
+    document.getElementById('btn-network').classList.remove('active');
+    initSankey();
+  });
+
 })();
