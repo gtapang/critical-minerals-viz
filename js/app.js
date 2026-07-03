@@ -615,24 +615,25 @@
     });
   }
 
-  // View toggle handlers
-  document.getElementById('btn-network').addEventListener('click', function () {
-    document.getElementById('graph').classList.remove('hidden');
-    document.getElementById('sankey-container').classList.add('hidden');
-    document.getElementById('legend').classList.remove('hidden');
-    document.getElementById('controls').classList.remove('hidden');
-    this.classList.add('active');
-    document.getElementById('btn-sankey').classList.remove('active');
-  });
-
-  document.getElementById('btn-sankey').addEventListener('click', function () {
-    document.getElementById('graph').classList.add('hidden');
-    document.getElementById('sankey-container').classList.remove('hidden');
-    document.getElementById('legend').classList.add('hidden');
-    document.getElementById('controls').classList.add('hidden');
-    this.classList.add('active');
-    document.getElementById('btn-network').classList.remove('active');
-    initSankey();
+  // View toggle handler
+  var sankeyActive = false;
+  document.getElementById('view-toggle-btn').addEventListener('click', function () {
+    if (!sankeyActive) {
+      document.getElementById('graph').classList.add('hidden');
+      document.getElementById('sankey-container').classList.remove('hidden');
+      document.getElementById('legend').classList.add('hidden');
+      document.getElementById('controls').classList.add('hidden');
+      this.textContent = 'Switch to Network';
+      sankeyActive = true;
+      initSankey();
+    } else {
+      document.getElementById('graph').classList.remove('hidden');
+      document.getElementById('sankey-container').classList.add('hidden');
+      document.getElementById('legend').classList.remove('hidden');
+      document.getElementById('controls').classList.remove('hidden');
+      this.textContent = 'Switch to Sankey';
+      sankeyActive = false;
+    }
   });
 
 })();
