@@ -1,1016 +1,297 @@
 {
   "nodes": [
-    {
-      "id": "china-northern-rare-earth",
-      "label": "China Northern Rare Earth",
-      "type": "company",
-      "segment": "extraction",
-      "country": "CN",
-      "description": "Largest REE producer, operates Bayan Obo deposit, state-aligned"
-    },
-    {
-      "id": "mp-materials",
-      "label": "MP Materials",
-      "type": "company",
-      "segment": "extraction",
-      "country": "US",
-      "description": "Mountain Pass mine, only US REE mine; offtake to Shenghe Resources for processing"
-    },
-    {
-      "id": "lynas-rare-earths",
-      "label": "Lynas Rare Earths",
-      "type": "company",
-      "segment": "extraction",
-      "country": "AU",
-      "description": "Largest REE producer outside China; Mt Weld + Kalgoorlie processing"
-    },
-    {
-      "id": "pilbara-minerals",
-      "label": "Pilbara Minerals",
-      "type": "company",
-      "segment": "extraction",
-      "country": "AU",
-      "description": "Australian lithium mining"
-    },
-    {
-      "id": "mineral-resources",
-      "label": "Mineral Resources",
-      "type": "company",
-      "segment": "extraction",
-      "country": "AU",
-      "description": "Australian lithium mining"
-    },
-    {
-      "id": "sqm",
-      "label": "SQM",
-      "type": "company",
-      "segment": "extraction",
-      "country": "CL",
-      "description": "Chile lithium (Salar de Atacama), iodine"
-    },
-    {
-      "id": "albemarle",
-      "label": "Albemarle",
-      "type": "company",
-      "segment": "extraction",
-      "country": "US",
-      "description": "US-based, lithium brine + hard rock (Greenbushes JV with Tianqi)"
-    },
-    {
-      "id": "glencore",
-      "label": "Glencore",
-      "type": "company",
-      "segment": "extraction",
-      "country": "CH",
-      "description": "Cobalt (DRC), copper, nickel; vertically integrated trading house"
-    },
-    {
-      "id": "vale",
-      "label": "Vale",
-      "type": "company",
-      "segment": "extraction",
-      "country": "BR",
-      "description": "Nickel (Indonesia, Canada), cobalt byproduct"
-    },
-    {
-      "id": "tianqi-lithium",
-      "label": "Tianqi Lithium",
-      "type": "company",
-      "segment": "extraction",
-      "country": "CN",
-      "description": "Chinese, stake in SQM + Greenbushes (Australia)"
-    },
-    {
-      "id": "ganfeng-lithium",
-      "label": "Ganfeng Lithium",
-      "type": "company",
-      "segment": "extraction",
-      "country": "CN",
-      "description": "Chinese, lithium across Argentina, Mexico, Australia"
-    },
-    {
-      "id": "jinduicheng-molybdenum",
-      "label": "Jinduicheng Molybdenum",
-      "type": "company",
-      "segment": "extraction",
-      "country": "CN",
-      "description": "Chinese molybdenum producer"
-    },
-    {
-      "id": "shenghe-resources",
-      "label": "Shenghe Resources",
-      "type": "company",
-      "segment": "processing",
-      "country": "CN",
-      "description": "Chinese REE processor; offtake partner of MP Materials"
-    },
-    {
-      "id": "umicore",
-      "label": "Umicore",
-      "type": "company",
-      "segment": "processing",
-      "country": "BE",
-      "description": "Belgian, battery cathode materials, cobalt refining"
-    },
-    {
-      "id": "sumitomo-metal-mining",
-      "label": "Sumitomo Metal Mining",
-      "type": "company",
-      "segment": "processing",
-      "country": "JP",
-      "description": "Japanese, nickel-cobalt refining, battery materials"
-    },
-    {
-      "id": "btr-new-material-group",
-      "label": "BTR New Material Group",
-      "type": "company",
-      "segment": "processing",
-      "country": "CN",
-      "description": "Chinese, anode material (graphite), cathode precursors"
-    },
-    {
-      "id": "tsmc",
-      "label": "TSMC",
-      "type": "company",
-      "segment": "end-use",
-      "country": "TW",
-      "description": "Semiconductors (Ga, Ge, In demand)"
-    },
-    {
-      "id": "samsung",
-      "label": "Samsung",
-      "type": "company",
-      "segment": "end-use",
-      "country": "KR",
-      "description": "Semiconductors (Ga, Ge, In demand)"
-    },
-    {
-      "id": "intel",
-      "label": "Intel",
-      "type": "company",
-      "segment": "end-use",
-      "country": "US",
-      "description": "Semiconductors (Ga, Ge, In demand)"
-    },
-    {
-      "id": "catl",
-      "label": "CATL",
-      "type": "company",
-      "segment": "end-use",
-      "country": "CN",
-      "description": "Batteries (Li, Co, Ni, graphite)"
-    },
-    {
-      "id": "byd",
-      "label": "BYD",
-      "type": "company",
-      "segment": "end-use",
-      "country": "CN",
-      "description": "Batteries (Li, Co, Ni, graphite)"
-    },
-    {
-      "id": "lg-energy-solution",
-      "label": "LG Energy Solution",
-      "type": "company",
-      "segment": "end-use",
-      "country": "KR",
-      "description": "Batteries (Li, Co, Ni, graphite)"
-    },
-    {
-      "id": "panasonic",
-      "label": "Panasonic",
-      "type": "company",
-      "segment": "end-use",
-      "country": "JP",
-      "description": "Batteries (Li, Co, Ni, graphite)"
-    },
-    {
-      "id": "tesla",
-      "label": "Tesla",
-      "type": "company",
-      "segment": "end-use",
-      "country": "US",
-      "description": "EVs, pushing into lithium refining (Corpus Christi)"
-    },
-    {
-      "id": "tsingshan-holding-group",
-      "label": "Tsingshan Holding Group",
-      "type": "company",
-      "segment": "processing",
-      "country": "CN",
-      "description": "Chinese private, dominant in Indonesian nickel processing; HPAL plants"
-    },
-    {
-      "id": "syrah-resources",
-      "label": "Syrah Resources",
-      "type": "company",
-      "segment": "extraction",
-      "country": "AU",
-      "description": "Mozambique graphite; Vidalia USA processing plant under construction; potential offtake to Tesla"
-    },
-    {
-      "id": "china",
-      "label": "China",
-      "type": "country",
-      "segment": null,
-      "country": "CN",
-      "description": "Extraction + processing monopoly, state coordination via rare earth quotas, export controls (Ga, Ge restrictions 2023+)"
-    },
-    {
-      "id": "us",
-      "label": "United States",
-      "type": "country",
-      "segment": null,
-      "country": "US",
-      "description": "CHIPS Act + Defense Production Act Title III funding; still processing-dependent"
-    },
-    {
-      "id": "eu",
-      "label": "European Union",
-      "type": "country",
-      "segment": null,
-      "country": "EU",
-      "description": "Critical Raw Materials Act (2024) \u2014 targets for domestic capacity, recycling, diversification; structurally behind"
-    },
-    {
-      "id": "australia",
-      "label": "Australia",
-      "type": "country",
-      "segment": null,
-      "country": "AU",
-      "description": "Resource-rich, processing-light; Lynas + Pilbara as Western-aligned suppliers; Greenbushes shared with China"
-    },
-    {
-      "id": "drc",
-      "label": "Democratic Republic of Congo",
-      "type": "country",
-      "segment": null,
-      "country": "CD",
-      "description": "Major cobalt resource node; most artisanal cobalt flows through Chinese-owned or Chinese-leased concessions"
-    },
-    {
-      "id": "indonesia",
-      "label": "Indonesia",
-      "type": "country",
-      "segment": null,
-      "country": "ID",
-      "description": "Nickel resource node; HPAL plants with Chinese JV partners; low processing value capture"
-    },
-    {
-      "id": "chile",
-      "label": "Chile",
-      "type": "country",
-      "segment": null,
-      "country": "CL",
-      "description": "Lithium triangle (Salar de Atacama); subject to corporate + state power dynamics"
-    },
-    {
-      "id": "philippines",
-      "label": "Philippines",
-      "type": "country",
-      "segment": null,
-      "country": "PH",
-      "description": "World's largest nickel ore exporter by volume; zero domestic processing beyond NPI; Chinese capital dominates extraction"
-    },
-    {
-      "id": "rare-earth-elements",
-      "label": "Rare Earth Elements",
-      "type": "mineral",
-      "segment": null,
-      "country": null,
-      "description": "Nd, Pr, Dy, Tb (magnets, motors), La, Ce (catalysts, polishing); China ~90% of processing"
-    },
-    {
-      "id": "lithium",
-      "label": "Lithium",
-      "type": "mineral",
-      "segment": null,
-      "country": null,
-      "description": "Battery metal; China ~65% of processing"
-    },
-    {
-      "id": "cobalt",
-      "label": "Cobalt",
-      "type": "mineral",
-      "segment": null,
-      "country": null,
-      "description": "Battery metal; DRC major source; China ~73% of processing"
-    },
-    {
-      "id": "nickel",
-      "label": "Nickel",
-      "type": "mineral",
-      "segment": null,
-      "country": null,
-      "description": "Battery metal; Indonesia, Philippines, Canada major sources"
-    },
-    {
-      "id": "manganese",
-      "label": "Manganese",
-      "type": "mineral",
-      "segment": null,
-      "country": null,
-      "description": "Battery metal"
-    },
-    {
-      "id": "graphite",
-      "label": "Graphite",
-      "type": "mineral",
-      "segment": null,
-      "country": null,
-      "description": "Anode material; ~90% Chinese (natural: Heilongjiang; synthetic: BTR, others)"
-    },
-    {
-      "id": "gallium",
-      "label": "Gallium",
-      "type": "mineral",
-      "segment": null,
-      "country": null,
-      "description": "Semiconductor-adjacent; China export controls 2023+"
-    },
-    {
-      "id": "germanium",
-      "label": "Germanium",
-      "type": "mineral",
-      "segment": null,
-      "country": null,
-      "description": "Semiconductor-adjacent; China export controls 2023+"
-    },
-    {
-      "id": "copper",
-      "label": "Copper",
-      "type": "mineral",
-      "segment": null,
-      "country": null,
-      "description": "Energy transition (wiring, grid)"
-    },
-    {
-      "id": "greenbushes",
-      "label": "Greenbushes",
-      "type": "deposit",
-      "segment": "extraction",
-      "country": "AU",
-      "description": "World's largest hard-rock lithium source; JV between Albemarle and Tianqi"
-    },
-    {
-      "id": "mountain-pass",
-      "label": "Mountain Pass",
-      "type": "deposit",
-      "segment": "extraction",
-      "country": "US",
-      "description": "Only US REE mine; operated by MP Materials"
-    },
-    {
-      "id": "bayan-obo",
-      "label": "Bayan Obo",
-      "type": "deposit",
-      "segment": "extraction",
-      "country": "CN",
-      "description": "Major REE deposit; operated by China Northern Rare Earth"
-    }
+    {"id":"china","name":"China","type":"country","role":"Dominant in extraction and especially processing/refining; ~70% cobalt refining, ~90%+ REE processing, ~99% low-purity gallium (2024, USGS), ~68% germanium, ~90% graphite processing, ~95% manganese refining","regulatory":"Export Control Law (2020); phased controls: gallium/germanium licensing (Aug 2023), graphite (Oct/Dec 2023), REE processing-tech ban (Dec 2023), antimony (Sep 2024), Dec 2024 ban on Ga/Ge/Sb to US, tungsten/tellurium/bismuth/molybdenum/indium (Feb 2025), 7 medium/heavy REEs incl Dy/Tb (Apr 2025), Oct 2025 extraterritorial FDPR-style rules (Announcements 55-62); most Oct 2025 measures suspended Nov 2025-Nov 2026 after Trump-Xi truce","reserves":"World's largest REE reserves (~44Mt); ~35Mt+ REO at Bayan Obo"},
+    {"id":"usa","name":"United States","type":"country","role":"Major end-user; import-reliant on 24 of 50 critical minerals from China; building domestic REE magnet chain via DoD","regulatory":"IRA EV-credit sourcing rules; DoD equity stakes (MP Materials); Defense Production Act","reserves":"Mountain Pass REE"},
+    {"id":"eu","name":"European Union","type":"country","role":"End-user bloc seeking diversification","regulatory":"Critical Raw Materials Act (2024): strategic project list and 2030 benchmarks","reserves":"Limited"},
+    {"id":"australia","name":"Australia","type":"country","role":"Leading lithium (spodumene) and REE miner outside China; >50% of mined lithium","regulatory":"FIRB review; critical minerals strategy","reserves":"Major lithium (Greenbushes), REE (Mount Weld)"},
+    {"id":"drc","name":"Democratic Republic of Congo","type":"country","role":"~76% of global mined cobalt; major copper","regulatory":"ARECOMS cobalt export quota (Oct 2025), ~96,600 t/yr cap from 2026; 10% royalty; Gécamines state miner","reserves":"World's largest cobalt reserves"},
+    {"id":"indonesia","name":"Indonesia","type":"country","role":"World's largest nickel producer/refiner; ~2nd cobalt via HPAL","regulatory":"2020 ore export ban drove downstream buildout (nickel export value ~$6B 2013 to ~$30B 2022); Chinese-dominated smelting","reserves":"World's largest nickel reserves"},
+    {"id":"chile","name":"Chile","type":"country","role":"Largest copper producer (~23% global); 2nd lithium","regulatory":"National Lithium Strategy; Codelco-SQM JV (Nova Andino Litio) giving state 51%+ of Atacama from 2025","reserves":"Largest copper reserves; major Atacama lithium"},
+    {"id":"philippines","name":"Philippines","type":"country","role":"World's 2nd-largest nickel ore producer/supplier; ~10.5% of global 2024; overwhelmingly exports raw ore to China","regulatory":"Mining Act 1995 (RA 7942); MPSA/FTAA via DENR-MGB; proposed raw-ore export ban passed Senate Feb 2025 but ban provision removed June 2025; 4% excise + royalties","reserves":"~485Mt nickel ore reserves (2023)","philippines_flag":true},
+    {"id":"japan","name":"Japan","type":"country","role":"End-user (battery/electronics); strategic upstream investor via Sumitomo, Mitsui, Sojitz, Pacific Metals","regulatory":"Stockpiling; ally supply agreements","reserves":"Minimal"},
+    {"id":"south_korea","name":"South Korea","type":"country","role":"Major battery/cathode maker (LG, Samsung SDI, SK On, POSCO)","reserves":"Minimal"},
+    {"id":"myanmar","name":"Myanmar","type":"country","role":"World's ~3rd largest REE producer (~31kt 2024, up from ~12kt 2022); ~two-thirds of China's heavy REE (Dy/Tb) imports by volume 2017-2024; Kachin ionic-clay mines KIA-controlled","regulatory":"KIA imposes 35,000 yuan/t + 20% levy on REE concentrate exports; largely unregulated post-2021 coup","reserves":"Major ionic-clay heavy REE"},
+    {"id":"new_caledonia","name":"New Caledonia","type":"country","role":"Major nickel producer (French territory); Goro/Prony","reserves":"Large nickel laterite"},
+    {"id":"canada","name":"Canada","type":"country","role":"Nickel, cobalt, germanium (Teck refines Red Dog zinc concentrate)","reserves":"Nickel, potash, uranium"},
+    {"id":"argentina","name":"Argentina","type":"country","role":"Lithium Triangle brine producer","reserves":"Major lithium brine"},
+    {"id":"russia","name":"Russia","type":"country","role":"Nickel (Nornickel), PGM, antimony (~18% ex-China supply)","reserves":"Nickel, PGMs, palladium"},
+    {"id":"south_africa","name":"South Africa","type":"country","role":"Dominant PGM producer; manganese, chromium","reserves":"World's largest PGM, manganese reserves"},
+    {"id":"brazil","name":"Brazil","type":"country","role":"Niobium, nickel (Vale), iron ore; emerging REE","reserves":"Niobium, nickel"},
+
+    {"id":"mp_materials","name":"MP Materials","type":"company","hq":"usa","minerals":"Rare earths (NdPr), magnets","position":"Only scaled US REE miner (Mountain Pass); building 10X magnet plant in Texas","ownership":"NYSE:MP; DoD becoming largest shareholder via $400M Series A preferred + up to $350M more; Shenghe retains a minority stake","subsidiaries":"MP Mine Operations LLC"},
+    {"id":"glencore","name":"Glencore","type":"company","hq":"switzerland","minerals":"Cobalt, copper, nickel, zinc","position":"Largest Western cobalt producer (~36,100t 2025 est.)","ownership":"LSE:GLEN","subsidiaries":"Kamoto Copper Company (KCC), Mutanda Mining (DRC); Murrin Murrin (Australia)"},
+    {"id":"catl","name":"CATL (Contemporary Amperex Technology)","type":"company","hq":"china","minerals":"Li-ion batteries (~37% global share)","position":"World's largest EV/ESS battery maker","ownership":"SZSE:300750, HKEX:3750","subsidiaries":"Brunp (recycling); stakes in CMOC, Pilbara, QMB Indonesia HPAL"},
+    {"id":"tsmc","name":"TSMC","type":"company","hq":"taiwan","minerals":"Semiconductors (consumer of gallium, high-purity materials)","position":"World's largest contract chipmaker","ownership":"TWSE:2330, NYSE:TSM"},
+    {"id":"tianqi","name":"Tianqi Lithium","type":"company","hq":"china","minerals":"Lithium (spodumene, chemicals)","position":"Major Chinese lithium chemical producer","ownership":"SZSE:002466, HKEX:9696; ~22.16% of SQM (from 23.77% acquired 2018, trimmed to ~22% in 2025-26); 51% of TLEA JV with IGO","subsidiaries":"TLEA; Kwinana refinery"},
+    {"id":"lynas","name":"Lynas Rare Earths","type":"company","hq":"australia","minerals":"Rare earths (NdPr, now Dy/Tb)","position":"Largest producer of separated REE outside China","ownership":"ASX:LYC","subsidiaries":"Lynas Malaysia (Kuantan); Kalgoorlie facility; Mount Weld mine"},
+    {"id":"albemarle","name":"Albemarle","type":"company","hq":"usa","minerals":"Lithium (brine + spodumene, chemicals)","position":"Top global lithium producer","ownership":"NYSE:ALB; 49% of Talison/Greenbushes; 60% of MARBL JV (Wodgina)","subsidiaries":"La Negra (Chile), Kemerton (WA), Salar de Atacama"},
+    {"id":"sqm","name":"SQM (Sociedad Química y Minera)","type":"company","hq":"chile","minerals":"Lithium (brine), potassium, iodine","position":"World's 2nd largest lithium producer","ownership":"NYSE:SQM; Tianqi ~22%; Codelco JV (Nova Andino Litio) giving state 51%+","subsidiaries":"Salar de Atacama brine, Antofagasta plants"},
+    {"id":"shenghe","name":"Shenghe Resources","type":"company","hq":"china","minerals":"Rare earths trading/processing","position":"Chinese state-adjacent REE trader; historically processed Mountain Pass concentrate","ownership":"SHA:600392","subsidiaries":"Shenghe Resources (Singapore) — MP offtake counterparty"},
+    {"id":"vale","name":"Vale","type":"company","hq":"brazil","minerals":"Nickel, copper, iron ore, cobalt","position":"Major diversified miner","ownership":"NYSE:VALE","subsidiaries":"Vale Base Metals; PT Vale Indonesia (44.3%)"},
+    {"id":"tsingshan","name":"Tsingshan Holding Group","type":"company","hq":"china","minerals":"Nickel, stainless steel","position":"World's largest nickel/stainless producer; dominant in Indonesia","ownership":"Private (China)","subsidiaries":"Shanghai Decent; IMIP Morowali; PT Weda Bay Nickel (51.3%)"},
+    {"id":"byd","name":"BYD","type":"company","hq":"china","minerals":"EVs, LFP batteries (Blade)","position":"Leading Chinese EV + battery maker","ownership":"SZSE:002594, HKEX:1211"},
+    {"id":"cmoc","name":"CMOC Group (China Molybdenum)","type":"company","hq":"china","minerals":"Cobalt, copper, molybdenum, niobium","position":"World's largest cobalt miner (114,165t 2024, ~41% global)","ownership":"HKEX:3993, SHA:603993; state-linked shareholders","subsidiaries":"Tenke Fungurume (80%), Kisanfu/KFM (DRC); IXM trading arm"},
+    {"id":"huayou","name":"Zhejiang Huayou Cobalt","type":"company","hq":"china","minerals":"Cobalt, nickel, precursors (pCAM)","position":"China's 2nd largest cobalt producer; vertically integrated","ownership":"SHA:603799","subsidiaries":"Bamo (cathode); Huafei/Huayue Indonesia HPAL; DRC mines"},
+    {"id":"gem","name":"GEM Co.","type":"company","hq":"china","minerals":"Nickel, cobalt, precursors, recycling","position":"Major battery-materials & recycling firm","ownership":"SZSE:002340","subsidiaries":"QMB New Materials (Indonesia HPAL with Tsingshan, CATL, Hanwa)"},
+    {"id":"ganfeng","name":"Ganfeng Lithium","type":"company","hq":"china","minerals":"Lithium (brine, spodumene, chemicals, batteries)","position":"Leading Chinese lithium producer","ownership":"SZSE:002460, HKEX:1772","subsidiaries":"Stakes in Cauchari-Olaroz (Argentina), Mount Marion (Australia), Mali"},
+    {"id":"china_northern_re","name":"China Northern Rare Earth","type":"company","hq":"china","minerals":"Rare earths (light: NdPr, La, Ce)","position":"World's largest REE producer by volume","ownership":"SHA:600111; ~37% held by Baogang Group","subsidiaries":"Baotou processing; processes Bayan Obo concentrate"},
+    {"id":"zijin","name":"Zijin Mining","type":"company","hq":"china","minerals":"Copper, gold, lithium, zinc","position":"Leading Chinese diversified miner","ownership":"SHA:601899, HKEX:2899; 39.6% of Kamoa-Kakula + 13.59% of Ivanhoe (44.45% economic)"},
+    {"id":"freeport","name":"Freeport-McMoRan","type":"company","hq":"usa","minerals":"Copper, gold, molybdenum","position":"Major copper miner","ownership":"NYSE:FCX; 48.8% of PT Freeport Indonesia (Grasberg)","subsidiaries":"Morenci, Cerro Verde, El Abra, PT-FI"},
+    {"id":"nornickel","name":"Nornickel (Norilsk Nickel)","type":"company","hq":"russia","minerals":"Nickel, palladium, platinum, copper","position":"Leading refined nickel & palladium producer","ownership":"MCX:GMKN"},
+    {"id":"rio_tinto","name":"Rio Tinto","type":"company","hq":"uk_australia","minerals":"Copper, iron ore, aluminium, lithium, TiO2, borates","position":"Major diversified miner","ownership":"ASX/LSE/NYSE:RIO; 30% of Escondida; 66% Oyu Tolgoi; acquired Arcadium Lithium"},
+    {"id":"bhp","name":"BHP","type":"company","hq":"australia","minerals":"Copper, iron ore, nickel, coal","position":"World's largest miner by value; ~1.86Mt copper 2025","ownership":"ASX/LSE/NYSE:BHP; 57.5% Escondida operator; Nickel West (suspended)"},
+    {"id":"anglo_american","name":"Anglo American","type":"company","hq":"uk","minerals":"Copper, PGM, iron ore, diamonds","position":"Major diversified miner; copper in Chile/Peru","ownership":"LSE:AAL"},
+    {"id":"igo","name":"IGO Limited","type":"company","hq":"australia","minerals":"Lithium, nickel","position":"Australian lithium/nickel; JV partner in Greenbushes","ownership":"ASX:IGO; 49% of TLEA JV with Tianqi"},
+    {"id":"pilbara_minerals","name":"Pilbara Minerals","type":"company","hq":"australia","minerals":"Lithium (spodumene)","position":"Leading independent hard-rock lithium miner","ownership":"ASX:PLS; operates Pilgangoora"},
+    {"id":"mineral_resources","name":"Mineral Resources","type":"company","hq":"australia","minerals":"Lithium, iron ore, mining services","position":"Operates Wodgina, Mt Marion","ownership":"ASX:MIN; 40% MARBL JV with Albemarle"},
+    {"id":"lg_energy","name":"LG Energy Solution","type":"company","hq":"south_korea","minerals":"Li-ion batteries","position":"Major global battery maker","ownership":"KRX:373220"},
+    {"id":"samsung_sdi","name":"Samsung SDI","type":"company","hq":"south_korea","minerals":"Li-ion batteries","position":"Major battery maker","ownership":"KRX:006400"},
+    {"id":"sk_on","name":"SK On","type":"company","hq":"south_korea","minerals":"Li-ion batteries","position":"Major battery maker","ownership":"SK Innovation subsidiary"},
+    {"id":"panasonic","name":"Panasonic Energy","type":"company","hq":"japan","minerals":"Li-ion batteries","position":"Key Tesla battery supplier","ownership":"TSE:6752"},
+    {"id":"samsung_elec","name":"Samsung Electronics","type":"company","hq":"south_korea","minerals":"Semiconductors, memory","position":"Major chipmaker/foundry","ownership":"KRX:005930"},
+    {"id":"intel","name":"Intel","type":"company","hq":"usa","minerals":"Semiconductors","position":"Major chipmaker (consumer of Ga/Ge/high-purity materials)","ownership":"NASDAQ:INTC"},
+    {"id":"nvidia","name":"Nvidia","type":"company","hq":"usa","minerals":"Semiconductors (fabless GPU)","position":"Leading AI chip designer; TSMC customer","ownership":"NASDAQ:NVDA"},
+    {"id":"smic","name":"SMIC","type":"company","hq":"china","minerals":"Semiconductors","position":"China's largest foundry","ownership":"SHA:688981, HKEX:0981"},
+    {"id":"asml","name":"ASML","type":"company","hq":"netherlands","minerals":"Semiconductor lithography (EUV)","position":"Sole EUV lithography supplier","ownership":"AEX/NASDAQ:ASML"},
+    {"id":"tesla","name":"Tesla","type":"company","hq":"usa","minerals":"EVs, batteries","position":"Leading Western EV maker; vertical battery integration","ownership":"NASDAQ:TSLA"},
+    {"id":"ford","name":"Ford","type":"company","hq":"usa","minerals":"EVs (partner in Indonesia nickel)","position":"Legacy automaker; nickel offtake via Pomalaa","ownership":"NYSE:F"},
+    {"id":"gm","name":"General Motors","type":"company","hq":"usa","minerals":"EVs","position":"Legacy automaker; lithium/cathode offtakes","ownership":"NYSE:GM"},
+    {"id":"umicore","name":"Umicore","type":"company","hq":"belgium","minerals":"Cathode materials, recycling, PGM refining","position":"Western battery-materials & recycling group","ownership":"EBR:UMI"},
+    {"id":"iluka","name":"Iluka Resources","type":"company","hq":"australia","minerals":"Mineral sands (zircon, TiO2), rare earths","position":"Building Eneabba REE refinery (gov-backed)","ownership":"ASX:ILU"},
+    {"id":"northern_minerals","name":"Northern Minerals","type":"company","hq":"australia","minerals":"Heavy rare earths (Dy, Tb)","position":"Browns Range HREE project developer","ownership":"ASX:NTU"},
+    {"id":"erg","name":"Eurasian Resources Group","type":"company","hq":"luxembourg","minerals":"Cobalt, copper","position":"Metalkol RTR tailings reprocessing in DRC","ownership":"Private"},
+    {"id":"jinchuan","name":"Jinchuan Group","type":"company","hq":"china","minerals":"Nickel, cobalt, copper, PGM","position":"China's largest cobalt refiner; ~20% global cobalt demand","ownership":"State-owned; 75% Musonoi (DRC) with Gécamines"},
+    {"id":"ivanhoe","name":"Ivanhoe Mines","type":"company","hq":"canada","minerals":"Copper, zinc, PGM","position":"Operator of Kamoa-Kakula","ownership":"TSX:IVN; 39.6% Kamoa-Kakula; Zijin 2nd-largest shareholder (13.59%)"},
+    {"id":"eramet","name":"Eramet","type":"company","hq":"france","minerals":"Nickel, manganese, lithium, mineral sands","position":"Diversified French miner; Weda Bay partner","ownership":"EPA:ERA; 38.7% PT Weda Bay Nickel"},
+    {"id":"sumitomo_mm","name":"Sumitomo Metal Mining","type":"company","hq":"japan","minerals":"Nickel, copper, cobalt, gold, materials","position":"Major Japanese miner/refiner; Philippine HPAL operator","ownership":"TSE:5713; 26.04% of Nickel Asia; 84.375%→100% of Coral Bay (CBNC); 62.5%-75% of Taganito HPAL","philippines_flag":true},
+    {"id":"nickel_asia","name":"Nickel Asia Corporation","type":"company","hq":"philippines","minerals":"Nickel ore (laterite), renewable energy","position":"Philippines' largest nickel producer; PNIA ~85% of PH output","ownership":"PSE:NIKL; Sumitomo Metal Mining Philippine Holdings 26.04%","subsidiaries":"Taganito Mining (65%), Rio Tuba (60%), Cagdianao Mining, Hinatuan Mining, Dinapigue","philippines_flag":true},
+    {"id":"global_ferronickel","name":"Global Ferronickel Holdings (FNI)","type":"company","hq":"philippines","minerals":"Nickel ore (laterite), ferronickel ambition","position":"Philippines' 2nd-largest nickel ore exporter; 5.448M WMT shipped 2024; ~93% of 2024 revenue from China","ownership":"PSE:FNI; principal subsidiary Platinum Group Metals Corp (PGMC); 20% of Guangdong Century Tsingshan ferronickel smelter (China)","subsidiaries":"PGMC (Cagdianao, Surigao), Ipilan Nickel (Palawan)","philippines_flag":true},
+    {"id":"sr_metals","name":"SR Metals","type":"company","hq":"philippines","minerals":"Nickel ore (laterite)","position":"Mid-tier PH nickel; ~10.09Bn kg ore to China 2020-2024 (~$195M)","ownership":"100% Filipino; Gutierrez family","subsidiaries":"Tubay project (Agusan del Norte); Dinagat via Vista Buena","philippines_flag":true},
+    {"id":"marcventures","name":"Marcventures Holdings","type":"company","hq":"philippines","minerals":"Nickel ore (laterite)","position":"Mid-tier PH nickel; Surigao del Sur; main market China","ownership":"PSE:MARC; subsidiary MMDC (MPSA 016-93-XIII, 4,799 ha)","philippines_flag":true},
+    {"id":"oceanagold","name":"OceanaGold","type":"company","hq":"australia_nz","minerals":"Gold, copper","position":"Operates Didipio (PH), Haile (US), Macraes/Waihi (NZ)","ownership":"TSX/ASX:OGC; 80% of OGPI, 20% PSE-listed","subsidiaries":"Didipio Mine","philippines_flag":true},
+    {"id":"sagittarius_mines","name":"Sagittarius Mines (SMI)","type":"company","hq":"philippines","minerals":"Copper, gold (Tampakan)","position":"Developer of Tampakan, SE Asia's largest undeveloped Cu-Au deposit","ownership":"Tampakan Group of Companies (Salvador Zamora); Glencore exited 2015; Indophil historically","philippines_flag":true},
+    {"id":"pt_vale_indonesia","name":"PT Vale Indonesia","type":"company","hq":"indonesia","minerals":"Nickel (matte, MHP)","position":"Major Indonesian nickel miner (Sorowako)","ownership":"IDX:INCO; Vale Canada 44.3%, MIND ID 20%, Sumitomo Metal Mining 15%, others 20.7%"},
+    {"id":"mind_id","name":"MIND ID (Inalum)","type":"company","hq":"indonesia","minerals":"Nickel, bauxite, tin, copper (state holding)","position":"Indonesian state mining holding","ownership":"State-owned; 51.24% PT Freeport Indonesia, 20% PT Vale Indonesia"},
+    {"id":"antam","name":"PT Antam","type":"company","hq":"indonesia","minerals":"Nickel, gold, bauxite","position":"Indonesian state miner; CATL JV partner","ownership":"IDX:ANTM (MIND ID group); 10% PT Weda Bay Nickel"},
+    {"id":"codelco","name":"Codelco","type":"company","hq":"chile","minerals":"Copper, now lithium","position":"World's largest copper miner (~1.33Mt 2024)","ownership":"Chilean state-owned; 51%+ of Nova Andino Litio JV with SQM"},
+
+    {"id":"ree","name":"Rare Earth Elements","type":"mineral","uses":"Permanent magnets (NdFeB) for EV motors, wind turbines; electronics, defense","top_producers":"China, US, Myanmar, Australia","criticality":"US & EU critical; extreme supply concentration","concentration":"China ~70% mined, ~90%+ processing"},
+    {"id":"ndpr","name":"Neodymium-Praseodymium (NdPr)","type":"mineral","uses":"NdFeB magnets (EV traction motors, wind turbines)","top_producers":"China (Bayan Obo), Australia (Mount Weld), US (Mountain Pass)","criticality":"Core light-REE magnet feedstock"},
+    {"id":"dysprosium","name":"Dysprosium/Terbium (heavy REE)","type":"mineral","uses":"High-temperature-resistant permanent magnets","top_producers":"Myanmar (Kachin), southern China (Jiangxi ionic clays)","criticality":"Heavy REE; Apr 2025 China export controls","concentration":"Myanmar ~two-thirds of China's HREE imports 2017-2024"},
+    {"id":"lithium","name":"Lithium","type":"mineral","uses":"Li-ion battery cathodes/electrolytes","top_producers":"Australia (spodumene), Chile/Argentina (brine), China","criticality":"US & EU critical","concentration":"China ~65% refining"},
+    {"id":"cobalt","name":"Cobalt","type":"mineral","uses":"NMC/NCA battery cathodes, superalloys","top_producers":"DRC (~76%), Indonesia","criticality":"US & EU critical","concentration":"DRC mining; China ~70% refining"},
+    {"id":"nickel","name":"Nickel","type":"mineral","uses":"Stainless steel, NMC/NCA battery cathodes","top_producers":"Indonesia (#1), Philippines (#2)","criticality":"Class 1 battery nickel critical","concentration":"Indonesia dominant; Chinese-controlled refining"},
+    {"id":"manganese","name":"Manganese","type":"mineral","uses":"Steel, NMC battery cathodes","top_producers":"South Africa, Gabon, Australia","criticality":"US & EU critical","concentration":"China ~95% refining"},
+    {"id":"graphite","name":"Graphite","type":"mineral","uses":"Li-ion battery anodes","top_producers":"China (~75% mined)","criticality":"US & EU critical","concentration":"China ~90% processing; Oct 2023 export licensing"},
+    {"id":"gallium","name":"Gallium","type":"mineral","uses":"Compound semiconductors (GaN, GaAs), LEDs, radar/defense","top_producers":"China (~99% primary low-purity 2024, USGS)","criticality":"US & EU critical","concentration":"China dominant; Aug 2023 licensing, Dec 2024 US ban, Jan 2025 tech controls"},
+    {"id":"germanium","name":"Germanium","type":"mineral","uses":"Fiber optics, infrared/night-vision optics, solar cells","top_producers":"China (~68%), Canada, Belgium, Russia","criticality":"US & EU critical","concentration":"Aug 2023 licensing, Dec 2024 US ban"},
+    {"id":"copper","name":"Copper","type":"mineral","uses":"Electrical wiring, grids, EVs, renewables","top_producers":"Chile, Peru, DRC, China","criticality":"EU strategic; energy-transition staple","concentration":"China ~44% refining"},
+    {"id":"antimony","name":"Antimony","type":"mineral","uses":"Flame retardants, ammunition, night vision, batteries","top_producers":"China (~48%), Russia (~18%)","criticality":"US & EU critical","concentration":"Sep 2024 controls, Dec 2024 US ban; exports fell ~97%, prices ~tripled"},
+    {"id":"pgm","name":"Platinum Group Metals","type":"mineral","uses":"Catalytic converters, fuel cells, electronics","top_producers":"South Africa, Russia","criticality":"US & EU critical"},
+    {"id":"tin","name":"Tin","type":"mineral","uses":"Solder for electronics, semiconductors","top_producers":"China, Indonesia, Myanmar","criticality":"US & EU critical"},
+    {"id":"tungsten","name":"Tungsten","type":"mineral","uses":"Hard metals, cutting tools, defense","top_producers":"China (dominant)","criticality":"US & EU critical","concentration":"Feb 2025 China controls"},
+    {"id":"silicon","name":"Silicon / Polysilicon","type":"mineral","uses":"Semiconductors, solar PV","top_producers":"China (dominant polysilicon)","criticality":"EU strategic; foundational to Pax-Silica framing"},
+
+    {"id":"greenbushes","name":"Greenbushes","type":"deposit","location":"australia","size":"World's largest hard-rock lithium mine; ~1.5Mtpa spodumene capacity; >35yr mine life","minerals":"lithium","operators":"Talison Lithium Australia: Albemarle 49%, TLEA 51% (Tianqi 26.01% + IGO 24.99% indirect)","production":"~1.4Mt spodumene concentrate FY (392kt Q4 2024)"},
+    {"id":"mountain_pass","name":"Mountain Pass","type":"deposit","location":"usa","size":"Only scaled US REE mine","minerals":"ree, ndpr","operators":"MP Materials","production":"Leading US NdPr concentrate; building domestic separation"},
+    {"id":"bayan_obo","name":"Bayan Obo","type":"deposit","location":"china","size":"World's largest REE deposit; ~35Mt+ REO (~80%+ China reserves, ~36% world)","minerals":"ree, ndpr","operators":"Mined by Baotou Steel Union (Baogang); processed by China Northern Rare Earth","production":"Dominant global light-REE (NdPr) source; REE co-product of iron ore"},
+    {"id":"escondida","name":"Escondida","type":"deposit","location":"chile","size":"World's largest copper mine; ~1.35Mtpa capacity","minerals":"copper","operators":"BHP 57.5% (operator), Rio Tinto 30%, JECO 12.5%","production":"BHP share ~1.13Mt Cu 2025"},
+    {"id":"grasberg","name":"Grasberg","type":"deposit","location":"indonesia","size":"One of world's largest Cu-Au mines; ~1.62Bt ore reserve (2022)","minerals":"copper","operators":"PT Freeport Indonesia: MIND ID 51.24%, Freeport-McMoRan 48.8%","production":"Disrupted by Sept 2025 fatal Block Cave incident; ~600kt Cu loss expected through 2026"},
+    {"id":"kamoa_kakula","name":"Kamoa-Kakula","type":"deposit","location":"drc","size":"Africa's largest, world's 3rd largest copper mine; >600ktpa capacity","minerals":"copper","operators":"Ivanhoe 39.6%, Zijin 39.6%, Crystal River 0.8%, DRC govt 20%","production":"~520-580kt Cu guidance 2025; Phase 3 concentrator online 2024"},
+    {"id":"tenke_fungurume","name":"Tenke Fungurume (TFM)","type":"deposit","location":"drc","size":"One of two largest DRC Cu-Co mines; ~37kt Co capacity","minerals":"cobalt, copper","operators":"CMOC 80%, Gécamines 20%","production":"Part of CMOC's 114,165t Co 2024"},
+    {"id":"kisanfu","name":"Kisanfu (KFM)","type":"deposit","location":"drc","size":"World's largest cobalt mine by output; ~50kt Co capacity","minerals":"cobalt, copper","operators":"CMOC (majority) with Gécamines; CATL held prior interest","production":"Major driver of CMOC 2024 record output"},
+    {"id":"mutanda","name":"Mutanda","type":"deposit","location":"drc","size":"Large Glencore Cu-Co mine (restarted 2021)","minerals":"cobalt, copper","operators":"Glencore","production":"Glencore ~3,925t combined (with KCC) Q4 2025 DRC export quota"},
+    {"id":"weda_bay","name":"Weda Bay","type":"deposit","location":"indonesia","size":"Major nickel laterite; feeds IWIP industrial park","minerals":"nickel","operators":"PT Weda Bay Nickel: Tsingshan 51.3%, Eramet 38.7%, PT Antam 10%","production":"One of world's largest nickel mines"},
+    {"id":"morowali","name":"Morowali (IMIP)","type":"deposit","location":"indonesia","size":"Indonesia Morowali Industrial Park; integrated nickel/HPAL hub","minerals":"nickel, cobalt","operators":"Tsingshan-led; hosts Huayue, QMB HPAL JVs","production":"Major NPI/MHP/battery-material complex"},
+    {"id":"sorowako","name":"Sorowako","type":"deposit","location":"indonesia","size":"PT Vale's flagship nickel operation, South Sulawesi","minerals":"nickel","operators":"PT Vale Indonesia; HPAL JV with Huayou (Sorowako, Pomalaa)","production":"Nickel matte + new MHP capacity"},
+    {"id":"salar_atacama","name":"Salar de Atacama","type":"deposit","location":"chile","size":"World's largest lithium brine reserves (CORFO-owned)","minerals":"lithium","operators":"SQM (~65% of Chile output) & Albemarle (~35%); Codelco taking control from 2025","production":"SQM ~180kt LCE capacity"},
+    {"id":"pilgangoora","name":"Pilgangoora","type":"deposit","location":"australia","size":"~223Mt @ 1.27% Li2O; one of world's largest hard-rock lithium mines","minerals":"lithium","operators":"Pilbara Minerals","production":"Major spodumene concentrate exporter"},
+    {"id":"mount_weld","name":"Mount Weld","type":"deposit","location":"australia","size":"106.6Mt @ 4.12% TREO resource; 32Mt @ 6.44% TREO reserve (Aug 2024); largest REE outside China","minerals":"ree, ndpr, dysprosium","operators":"Lynas Rare Earths","production":"Feeds Kalgoorlie + Malaysia; ~7,200tpa NdPr expanding to 12,000tpa"},
+    {"id":"kachin_ree","name":"Kachin/Kayah REE district","type":"deposit","location":"myanmar","size":"Major ionic-clay heavy REE; ~370+ mining sites by end-2024","minerals":"dysprosium, ree","operators":"KIA-controlled; sold to Chinese processors","production":"~two-thirds of China's HREE (Dy/Tb) import feedstock"},
+    {"id":"coral_bay_hpal","name":"Coral Bay HPAL (CBNC)","type":"deposit","location":"philippines","size":"First PH HPAL; 24,000t/yr Ni + 2,500t/yr Co, Rio Tuba, Palawan","minerals":"nickel, cobalt","operators":"Sumitomo Metal Mining (moving to 100% after buying NAC's 15.625%)","production":"Ni/Co mixed sulfide refined in Japan","philippines_flag":true},
+    {"id":"taganito_hpal","name":"Taganito HPAL","type":"deposit","location":"philippines","size":"~30,000-36,000t/yr Ni + ~3,000t/yr Co; Claver, Surigao del Norte","minerals":"nickel, cobalt","operators":"Sumitomo Metal Mining 62.5%-75%, Nickel Asia ~10-22.5%, Mitsui 15%","production":"Ni/Co mixed sulfide (MSP) to Japan","philippines_flag":true},
+    {"id":"taganito_mine","name":"Taganito Mine","type":"deposit","location":"philippines","size":"Largest PH nickel mine; ~70kt Ni content 2023","minerals":"nickel","operators":"Taganito Mining Corp (Nickel Asia 65%, Pacific Metals 33.5%, Sojitz 1.5%)","production":"Feeds Taganito HPAL + ore export","philippines_flag":true},
+    {"id":"rio_tuba","name":"Rio Tuba Mine","type":"deposit","location":"philippines","size":"Nickel laterite, Bataraza, Palawan","minerals":"nickel","operators":"Rio Tuba Nickel Mining Corp (Nickel Asia 60%)","production":"Saprolite/limonite export + feed to Coral Bay HPAL","philippines_flag":true},
+    {"id":"tampakan","name":"Tampakan","type":"deposit","location":"philippines","size":"~2.94Bt @ 0.51% Cu, 0.19g/t Au = 15Mt Cu + 17.6Moz Au; SE Asia's largest undeveloped Cu-Au","minerals":"copper","operators":"Sagittarius Mines (Tampakan Group / Zamora)","production":"Undeveloped; targeting ~375ktpa Cu + 360koz Au over 17yr; ~2028 start","philippines_flag":true},
+    {"id":"didipio","name":"Didipio","type":"deposit","location":"philippines","size":"Cu-Au porphyry, Nueva Vizcaya/Quirino; ~6.2Moz Au reserves company-wide 2024","minerals":"copper","operators":"OceanaGold Philippines (OGPI) 80% OceanaGold / 20% public (FTAA No. 001)","production":"2nd-largest PH gold/copper producer","philippines_flag":true},
+    {"id":"cagdianao","name":"Cagdianao Mine (PGMC)","type":"deposit","location":"philippines","size":"MPSA 007-92-X, ~5,220 ha, >110Mt WMT resource @ ~1.2% Ni; ~7.6M WMT/yr capacity","minerals":"nickel","operators":"Platinum Group Metals Corp (Global Ferronickel)","production":"~61% of FNI 2024 shipment revenue","philippines_flag":true},
+    {"id":"zambales_district","name":"Zambales nickel district","type":"deposit","location":"philippines","size":"Luzon laterite/chromite district (Sta. Cruz-Candelaria)","minerals":"nickel","operators":"DMCI (ZDMC/ZCMC), Eramen Minerals, BenguetCorp Nickel Mines","production":"Individual mines ~0.6-1.5M WMT/yr; exports to Japan/Korea","philippines_flag":true},
+    {"id":"surigao_dinagat_district","name":"Surigao/Dinagat nickel district","type":"deposit","location":"philippines","size":"Mindanao's dominant, highest-grade nickel laterite region (Surigao Mineral Reservation)","minerals":"nickel","operators":"Nickel Asia (Taganito, Cagdianao, Hinatuan), FNI/PGMC, SR Metals, Marcventures nearby","production":"Largest PH nickel district","philippines_flag":true}
   ],
   "links": [
-    {
-      "source": "mp-materials",
-      "target": "shenghe-resources",
-      "type": "offtake",
-      "description": "MP Materials sends REE concentrate to Shenghe Resources (China) for processing"
-    },
-    {
-      "source": "albemarle",
-      "target": "tianqi-lithium",
-      "type": "jv",
-      "description": "JV at Greenbushes (Australia) \u2014 world's largest hard-rock lithium source; both companies also compete downstream"
-    },
-    {
-      "source": "tianqi-lithium",
-      "target": "sqm",
-      "type": "ownership",
-      "description": "Tianqi held ~24% stake in SQM (Chile) \u2014 cross-ownership across the lithium triangle"
-    },
-    {
-      "source": "albemarle",
-      "target": "tianqi-lithium",
-      "type": "competes",
-      "description": "Both companies compete downstream despite Greenbushes JV"
-    },
-    {
-      "source": "glencore",
-      "target": "catl",
-      "type": "supply",
-      "description": "Glencore (DRC cobalt) \u2192 Chinese intermediaries \u2192 CATL batteries \u2192 global EV supply"
-    },
-    {
-      "source": "glencore",
-      "target": "byd",
-      "type": "supply",
-      "description": "Glencore (DRC cobalt) \u2192 Chinese intermediaries \u2192 BYD batteries \u2192 global EV supply"
-    },
-    {
-      "source": "vale",
-      "target": "tsingshan-holding-group",
-      "type": "jv",
-      "description": "Vale Indonesia (Brazilian-owned) + Chinese smelter JVs (Tsingshan, others) \u2192 HPAL plants \u2192 battery-grade nickel sulfate"
-    },
-    {
-      "source": "tsingshan-holding-group",
-      "target": "catl",
-      "type": "supply",
-      "description": "HPAL nickel sulfate from Tsingshan Indonesian operations \u2192 CATL"
-    },
-    {
-      "source": "tsingshan-holding-group",
-      "target": "lg-energy-solution",
-      "type": "supply",
-      "description": "HPAL nickel sulfate from Tsingshan Indonesian operations \u2192 LG Energy Solution"
-    },
-    {
-      "source": "syrah-resources",
-      "target": "tesla",
-      "type": "offtake",
-      "description": "Syrah offtake to Tesla? (Vidalia, USA processing plant under construction)"
-    },
-    {
-      "source": "china-northern-rare-earth",
-      "target": "rare-earth-elements",
-      "type": "produces",
-      "description": "Largest REE producer; Bayan Obo deposit"
-    },
-    {
-      "source": "mp-materials",
-      "target": "rare-earth-elements",
-      "type": "produces",
-      "description": "Mountain Pass \u2014 only US REE mine"
-    },
-    {
-      "source": "lynas-rare-earths",
-      "target": "rare-earth-elements",
-      "type": "produces",
-      "description": "Largest REE producer outside China; Mt Weld + Kalgoorlie processing"
-    },
-    {
-      "source": "shenghe-resources",
-      "target": "rare-earth-elements",
-      "type": "produces",
-      "description": "Chinese REE processor; processes MP Materials concentrate"
-    },
-    {
-      "source": "pilbara-minerals",
-      "target": "lithium",
-      "type": "produces",
-      "description": "Australian lithium mining"
-    },
-    {
-      "source": "mineral-resources",
-      "target": "lithium",
-      "type": "produces",
-      "description": "Australian lithium mining"
-    },
-    {
-      "source": "sqm",
-      "target": "lithium",
-      "type": "produces",
-      "description": "Chile lithium (Salar de Atacama)"
-    },
-    {
-      "source": "albemarle",
-      "target": "lithium",
-      "type": "produces",
-      "description": "US-based, lithium brine + hard rock (Greenbushes)"
-    },
-    {
-      "source": "tianqi-lithium",
-      "target": "lithium",
-      "type": "produces",
-      "description": "Chinese, lithium \u2014 stake in SQM + Greenbushes"
-    },
-    {
-      "source": "ganfeng-lithium",
-      "target": "lithium",
-      "type": "produces",
-      "description": "Chinese, lithium across Argentina, Mexico, Australia"
-    },
-    {
-      "source": "glencore",
-      "target": "cobalt",
-      "type": "produces",
-      "description": "Cobalt (DRC/Congo)"
-    },
-    {
-      "source": "glencore",
-      "target": "copper",
-      "type": "produces",
-      "description": "Copper production"
-    },
-    {
-      "source": "glencore",
-      "target": "nickel",
-      "type": "produces",
-      "description": "Nickel production"
-    },
-    {
-      "source": "vale",
-      "target": "nickel",
-      "type": "produces",
-      "description": "Nickel (Indonesia, Canada)"
-    },
-    {
-      "source": "vale",
-      "target": "cobalt",
-      "type": "produces",
-      "description": "Cobalt byproduct from nickel operations"
-    },
-    {
-      "source": "jinduicheng-molybdenum",
-      "target": "manganese",
-      "type": "produces",
-      "description": "Chinese molybdenum (manganese group metal)"
-    },
-    {
-      "source": "umicore",
-      "target": "cobalt",
-      "type": "produces",
-      "description": "Belgian, battery cathode materials, cobalt refining"
-    },
-    {
-      "source": "sumitomo-metal-mining",
-      "target": "nickel",
-      "type": "produces",
-      "description": "Japanese, nickel-cobalt refining"
-    },
-    {
-      "source": "sumitomo-metal-mining",
-      "target": "cobalt",
-      "type": "produces",
-      "description": "Japanese, nickel-cobalt refining"
-    },
-    {
-      "source": "btr-new-material-group",
-      "target": "graphite",
-      "type": "produces",
-      "description": "Chinese, anode material (graphite), cathode precursors"
-    },
-    {
-      "source": "syrah-resources",
-      "target": "graphite",
-      "type": "produces",
-      "description": "Mozambique graphite; Vidalia USA processing plant"
-    },
-    {
-      "source": "tsingshan-holding-group",
-      "target": "nickel",
-      "type": "produces",
-      "description": "Dominant in Indonesian nickel processing; HPAL plants"
-    },
-    {
-      "source": "china-northern-rare-earth",
-      "target": "china",
-      "type": "headquartered",
-      "description": "Chinese company, state-aligned"
-    },
-    {
-      "source": "mp-materials",
-      "target": "us",
-      "type": "headquartered",
-      "description": "US-based company"
-    },
-    {
-      "source": "lynas-rare-earths",
-      "target": "australia",
-      "type": "headquartered",
-      "description": "Australian company"
-    },
-    {
-      "source": "pilbara-minerals",
-      "target": "australia",
-      "type": "headquartered",
-      "description": "Australian company"
-    },
-    {
-      "source": "mineral-resources",
-      "target": "australia",
-      "type": "headquartered",
-      "description": "Australian company"
-    },
-    {
-      "source": "sqm",
-      "target": "chile",
-      "type": "headquartered",
-      "description": "Chilean company"
-    },
-    {
-      "source": "albemarle",
-      "target": "us",
-      "type": "headquartered",
-      "description": "US-based company"
-    },
-    {
-      "source": "glencore",
-      "target": "eu",
-      "type": "headquartered",
-      "description": "Switzerland-based trading house"
-    },
-    {
-      "source": "vale",
-      "target": "eu",
-      "type": "headquartered",
-      "description": "Brazilian-owned; Vale Indonesia operates in Indonesia"
-    },
-    {
-      "source": "tianqi-lithium",
-      "target": "china",
-      "type": "headquartered",
-      "description": "Chinese company"
-    },
-    {
-      "source": "ganfeng-lithium",
-      "target": "china",
-      "type": "headquartered",
-      "description": "Chinese company"
-    },
-    {
-      "source": "jinduicheng-molybdenum",
-      "target": "china",
-      "type": "headquartered",
-      "description": "Chinese company"
-    },
-    {
-      "source": "shenghe-resources",
-      "target": "china",
-      "type": "headquartered",
-      "description": "Chinese company"
-    },
-    {
-      "source": "umicore",
-      "target": "eu",
-      "type": "headquartered",
-      "description": "Belgian company"
-    },
-    {
-      "source": "sumitomo-metal-mining",
-      "target": "eu",
-      "type": "headquartered",
-      "description": "Japanese company"
-    },
-    {
-      "source": "btr-new-material-group",
-      "target": "china",
-      "type": "headquartered",
-      "description": "Chinese company"
-    },
-    {
-      "source": "tsmc",
-      "target": "eu",
-      "type": "headquartered",
-      "description": "Taiwan-based semiconductor foundry"
-    },
-    {
-      "source": "samsung",
-      "target": "eu",
-      "type": "headquartered",
-      "description": "South Korean conglomerate"
-    },
-    {
-      "source": "intel",
-      "target": "us",
-      "type": "headquartered",
-      "description": "US-based semiconductor company"
-    },
-    {
-      "source": "catl",
-      "target": "china",
-      "type": "headquartered",
-      "description": "Chinese battery manufacturer"
-    },
-    {
-      "source": "byd",
-      "target": "china",
-      "type": "headquartered",
-      "description": "Chinese battery/EV manufacturer"
-    },
-    {
-      "source": "lg-energy-solution",
-      "target": "eu",
-      "type": "headquartered",
-      "description": "South Korean battery manufacturer"
-    },
-    {
-      "source": "panasonic",
-      "target": "eu",
-      "type": "headquartered",
-      "description": "Japanese battery manufacturer"
-    },
-    {
-      "source": "tesla",
-      "target": "us",
-      "type": "headquartered",
-      "description": "US-based EV manufacturer"
-    },
-    {
-      "source": "tsingshan-holding-group",
-      "target": "china",
-      "type": "headquartered",
-      "description": "Chinese private company"
-    },
-    {
-      "source": "syrah-resources",
-      "target": "australia",
-      "type": "headquartered",
-      "description": "Australian company"
-    },
-    {
-      "source": "china",
-      "target": "china-northern-rare-earth",
-      "type": "regulates",
-      "description": "State coordination via rare earth quotas"
-    },
-    {
-      "source": "china",
-      "target": "shenghe-resources",
-      "type": "regulates",
-      "description": "State coordination via rare earth quotas"
-    },
-    {
-      "source": "china",
-      "target": "tianqi-lithium",
-      "type": "regulates",
-      "description": "State coordination, export controls"
-    },
-    {
-      "source": "china",
-      "target": "ganfeng-lithium",
-      "type": "regulates",
-      "description": "State coordination"
-    },
-    {
-      "source": "china",
-      "target": "jinduicheng-molybdenum",
-      "type": "regulates",
-      "description": "State coordination"
-    },
-    {
-      "source": "china",
-      "target": "btr-new-material-group",
-      "type": "regulates",
-      "description": "State coordination"
-    },
-    {
-      "source": "china",
-      "target": "catl",
-      "type": "regulates",
-      "description": "State coordination"
-    },
-    {
-      "source": "china",
-      "target": "byd",
-      "type": "regulates",
-      "description": "State coordination"
-    },
-    {
-      "source": "china",
-      "target": "tsingshan-holding-group",
-      "type": "regulates",
-      "description": "State coordination"
-    },
-    {
-      "source": "china",
-      "target": "gallium",
-      "type": "regulates",
-      "description": "Export controls on gallium (2023+)"
-    },
-    {
-      "source": "china",
-      "target": "germanium",
-      "type": "regulates",
-      "description": "Export controls on germanium (2023+)"
-    },
-    {
-      "source": "us",
-      "target": "mp-materials",
-      "type": "regulates",
-      "description": "Defense Production Act Title III funding for MP Materials"
-    },
-    {
-      "source": "us",
-      "target": "lynas-rare-earths",
-      "type": "regulates",
-      "description": "US plant (Texas) supported by US government funding"
-    },
-    {
-      "source": "eu",
-      "target": "umicore",
-      "type": "regulates",
-      "description": "Critical Raw Materials Act (2024) \u2014 domestic capacity targets"
-    },
-    {
-      "source": "mp-materials",
-      "target": "mountain-pass",
-      "type": "ownership",
-      "description": "MP Materials operates Mountain Pass mine"
-    },
-    {
-      "source": "china-northern-rare-earth",
-      "target": "bayan-obo",
-      "type": "ownership",
-      "description": "China Northern Rare Earth operates Bayan Obo deposit"
-    },
-    {
-      "source": "albemarle",
-      "target": "greenbushes",
-      "type": "ownership",
-      "description": "Albemarle JV partner at Greenbushes"
-    },
-    {
-      "source": "tianqi-lithium",
-      "target": "greenbushes",
-      "type": "ownership",
-      "description": "Tianqi JV partner at Greenbushes"
-    },
-    {
-      "source": "tsmc",
-      "target": "gallium",
-      "type": "supply",
-      "description": "Semiconductor manufacturing requires Ga"
-    },
-    {
-      "source": "tsmc",
-      "target": "germanium",
-      "type": "supply",
-      "description": "Semiconductor manufacturing requires Ge"
-    },
-    {
-      "source": "samsung",
-      "target": "gallium",
-      "type": "supply",
-      "description": "Semiconductor manufacturing requires Ga"
-    },
-    {
-      "source": "samsung",
-      "target": "germanium",
-      "type": "supply",
-      "description": "Semiconductor manufacturing requires Ge"
-    },
-    {
-      "source": "intel",
-      "target": "gallium",
-      "type": "supply",
-      "description": "Semiconductor manufacturing requires Ga"
-    },
-    {
-      "source": "intel",
-      "target": "germanium",
-      "type": "supply",
-      "description": "Semiconductor manufacturing requires Ge"
-    },
-    {
-      "source": "catl",
-      "target": "lithium",
-      "type": "supply",
-      "description": "Battery manufacturing requires Li"
-    },
-    {
-      "source": "catl",
-      "target": "cobalt",
-      "type": "supply",
-      "description": "Battery manufacturing requires Co"
-    },
-    {
-      "source": "catl",
-      "target": "nickel",
-      "type": "supply",
-      "description": "Battery manufacturing requires Ni"
-    },
-    {
-      "source": "catl",
-      "target": "graphite",
-      "type": "supply",
-      "description": "Battery manufacturing requires graphite"
-    },
-    {
-      "source": "byd",
-      "target": "lithium",
-      "type": "supply",
-      "description": "Battery manufacturing requires Li"
-    },
-    {
-      "source": "byd",
-      "target": "cobalt",
-      "type": "supply",
-      "description": "Battery manufacturing requires Co"
-    },
-    {
-      "source": "byd",
-      "target": "nickel",
-      "type": "supply",
-      "description": "Battery manufacturing requires Ni"
-    },
-    {
-      "source": "byd",
-      "target": "graphite",
-      "type": "supply",
-      "description": "Battery manufacturing requires graphite"
-    },
-    {
-      "source": "lg-energy-solution",
-      "target": "lithium",
-      "type": "supply",
-      "description": "Battery manufacturing requires Li"
-    },
-    {
-      "source": "lg-energy-solution",
-      "target": "cobalt",
-      "type": "supply",
-      "description": "Battery manufacturing requires Co"
-    },
-    {
-      "source": "lg-energy-solution",
-      "target": "nickel",
-      "type": "supply",
-      "description": "Battery manufacturing requires Ni"
-    },
-    {
-      "source": "lg-energy-solution",
-      "target": "graphite",
-      "type": "supply",
-      "description": "Battery manufacturing requires graphite"
-    },
-    {
-      "source": "panasonic",
-      "target": "lithium",
-      "type": "supply",
-      "description": "Battery manufacturing requires Li"
-    },
-    {
-      "source": "panasonic",
-      "target": "cobalt",
-      "type": "supply",
-      "description": "Battery manufacturing requires Co"
-    },
-    {
-      "source": "panasonic",
-      "target": "nickel",
-      "type": "supply",
-      "description": "Battery manufacturing requires Ni"
-    },
-    {
-      "source": "panasonic",
-      "target": "graphite",
-      "type": "supply",
-      "description": "Battery manufacturing requires graphite"
-    },
-    {
-      "source": "tesla",
-      "target": "lithium",
-      "type": "supply",
-      "description": "EV manufacturing requires Li; pushing into lithium refining (Corpus Christi)"
-    },
-    {
-      "source": "tesla",
-      "target": "cobalt",
-      "type": "supply",
-      "description": "EV manufacturing requires Co; downstream of DRC cobalt chain"
-    },
-    {
-      "source": "tesla",
-      "target": "nickel",
-      "type": "supply",
-      "description": "EV manufacturing requires Ni"
-    },
-    {
-      "source": "tesla",
-      "target": "graphite",
-      "type": "supply",
-      "description": "EV manufacturing requires graphite"
-    },
-    {
-      "source": "glencore",
-      "target": "drc",
-      "type": "headquartered",
-      "description": "Glencore operates major cobalt mines in DRC"
-    },
-    {
-      "source": "greenbushes",
-      "target": "lithium",
-      "type": "produces",
-      "description": "World's largest hard-rock lithium source"
-    },
-    {
-      "source": "mountain-pass",
-      "target": "rare-earth-elements",
-      "type": "produces",
-      "description": "REE deposit at Mountain Pass"
-    },
-    {
-      "source": "bayan-obo",
-      "target": "rare-earth-elements",
-      "type": "produces",
-      "description": "Major REE deposit at Bayan Obo"
-    },
-    {
-      "source": "tesla",
-      "target": "lithium",
-      "type": "produces",
-      "description": "Vertically pushing into lithium refining (Corpus Christi)"
-    }
+    {"source":"mp_materials","target":"mountain_pass","type":"ownership","description":"MP Materials owns and operates Mountain Pass, the only scaled US REE mine"},
+    {"source":"mp_materials","target":"shenghe","type":"offtake","description":"Historic offtake (Mar 4 2022 via Shenghe Singapore) to process Mountain Pass concentrate in China; shipments to China ceased Q3 2025; agreement expires Jan 2026, not renewed"},
+    {"source":"shenghe","target":"mp_materials","type":"ownership","description":"Shenghe retains a minority equity stake in MP Materials (undisclosed %; governance complexity)"},
+    {"source":"usa","target":"mp_materials","type":"ownership","description":"DoD $400M Series A preferred (largest shareholder) + up to $350M more + $150M loan + $110/kg NdPr price floor, announced Jul 10 2025"},
+    {"source":"usa","target":"mp_materials","type":"offtake","description":"DoD 10-yr offtake of 100% of 10X facility magnet output; >=$140M annual EBITDA threshold"},
+    {"source":"mp_materials","target":"ndpr","type":"produces","description":"Produces NdPr concentrate/oxide; building magnet capacity"},
+    {"source":"mountain_pass","target":"ree","type":"produces","description":"REE concentrate"},
+    {"source":"albemarle","target":"greenbushes","type":"ownership","description":"Albemarle owns 49% of Talison Lithium Australia (Greenbushes)"},
+    {"source":"tianqi","target":"greenbushes","type":"ownership","description":"Tianqi holds 26.01% indirect interest via TLEA/Talison"},
+    {"source":"igo","target":"greenbushes","type":"ownership","description":"IGO holds 24.99% indirect interest via TLEA"},
+    {"source":"tianqi","target":"igo","type":"jv","description":"TLEA JV: Tianqi 51% / IGO 49%; holds 51% of Talison and 100% of Kwinana refinery"},
+    {"source":"greenbushes","target":"lithium","type":"produces","description":"~1.4Mtpa spodumene concentrate"},
+    {"source":"tianqi","target":"sqm","type":"ownership","description":"Tianqi holds ~22.16% of SQM (acquired 23.77% for $4.1B in 2018; trimmed toward ~22% 2025-26); antitrust limits board influence"},
+    {"source":"codelco","target":"sqm","type":"jv","description":"Codelco-SQM JV Nova Andino Litio: Codelco 51%+share; state gets 85% of operating margin from 2031; formed Dec 2025"},
+    {"source":"sqm","target":"salar_atacama","type":"ownership","description":"SQM operates Salar de Atacama brine (~65% of Chile output) under CORFO lease"},
+    {"source":"albemarle","target":"salar_atacama","type":"ownership","description":"Albemarle operates Salar de Atacama brine (~35% of Chile output) under CORFO lease"},
+    {"source":"salar_atacama","target":"lithium","type":"produces","description":"Lithium carbonate/hydroxide (SQM ~180kt LCE capacity)"},
+    {"source":"tianqi","target":"lithium","type":"produces","description":"Lithium chemicals (Sichuan; Kwinana)"},
+    {"source":"albemarle","target":"lithium","type":"produces","description":"Lithium carbonate/hydroxide"},
+    {"source":"albemarle","target":"mineral_resources","type":"jv","description":"MARBL JV: Albemarle 60% / Mineral Resources 40% (Wodgina)"},
+    {"source":"pilbara_minerals","target":"pilgangoora","type":"ownership","description":"Pilbara Minerals owns/operates Pilgangoora"},
+    {"source":"pilgangoora","target":"lithium","type":"produces","description":"Spodumene concentrate"},
+    {"source":"ganfeng","target":"lithium","type":"produces","description":"Lithium chemicals, brine + spodumene stakes"},
+    {"source":"glencore","target":"mutanda","type":"ownership","description":"Glencore owns Mutanda (DRC Cu-Co)"},
+    {"source":"glencore","target":"cobalt","type":"produces","description":"Largest Western cobalt producer (~36,100t 2025 est.)"},
+    {"source":"mutanda","target":"cobalt","type":"produces","description":"Cobalt as copper by-product"},
+    {"source":"drc","target":"glencore","type":"regulates","description":"ARECOMS quota: Glencore ~3,925t (Kamoto+Mutanda) Q4 2025; 10% royalty"},
+    {"source":"drc","target":"cmoc","type":"regulates","description":"ARECOMS quota: CMOC ~6,650t Q4 2025; annual cap ~96,600t from 2026"},
+    {"source":"cmoc","target":"tenke_fungurume","type":"ownership","description":"CMOC 80%, Gécamines 20%"},
+    {"source":"cmoc","target":"kisanfu","type":"ownership","description":"CMOC majority owner; world's largest cobalt mine by output"},
+    {"source":"cmoc","target":"cobalt","type":"produces","description":"World's largest cobalt miner: 114,165t 2024 (~41% global share, per Benchmark/Cobalt Institute)"},
+    {"source":"tenke_fungurume","target":"cobalt","type":"produces","description":"Cobalt + copper"},
+    {"source":"kisanfu","target":"cobalt","type":"produces","description":"Cobalt + copper"},
+    {"source":"glencore","target":"catl","type":"supply","description":"DRC cobalt hydroxide → Chinese intermediaries/refiners → battery cathode chains"},
+    {"source":"cmoc","target":"catl","type":"supply","description":"CMOC/IXM cobalt & DRC material feeds Chinese refiners supplying CATL"},
+    {"source":"huayou","target":"catl","type":"supply","description":"Huayou supplies cathode precursor (pCAM) to CATL"},
+    {"source":"catl","target":"cmoc","type":"ownership","description":"CATL has held cobalt-access stakes/relationships with CMOC (and prior Kisanfu interest)"},
+    {"source":"catl","target":"lithium","type":"supply","description":"Sources lithium (Pilbara stake, Bolivia, Millennial); LFP/NMC cells"},
+    {"source":"vale","target":"pt_vale_indonesia","type":"ownership","description":"Vale Canada 44.3% of PT Vale Indonesia"},
+    {"source":"sumitomo_mm","target":"pt_vale_indonesia","type":"ownership","description":"Sumitomo Metal Mining 15% of PT Vale Indonesia"},
+    {"source":"mind_id","target":"pt_vale_indonesia","type":"ownership","description":"MIND ID 20% of PT Vale Indonesia"},
+    {"source":"pt_vale_indonesia","target":"sorowako","type":"ownership","description":"Operates Sorowako nickel block"},
+    {"source":"pt_vale_indonesia","target":"huayou","type":"jv","description":"Pomalaa & Sorowako HPAL; Vale option up to 30% of Pomalaa (Huayou 53%, Ford 17%, Vale 30%)"},
+    {"source":"ford","target":"huayou","type":"jv","description":"Pomalaa Block HPAL three-way: Huayou ~53%, Ford ~17%, PT Vale up to 30%; ~120ktpa MHP"},
+    {"source":"ford","target":"nickel","type":"offtake","description":"Ford secures MHP/nickel from Pomalaa for EV batteries"},
+    {"source":"tsingshan","target":"weda_bay","type":"ownership","description":"Tsingshan 51.3% of PT Weda Bay Nickel"},
+    {"source":"eramet","target":"weda_bay","type":"ownership","description":"Eramet 38.7% of PT Weda Bay Nickel"},
+    {"source":"antam","target":"weda_bay","type":"ownership","description":"PT Antam 10% of PT Weda Bay Nickel"},
+    {"source":"tsingshan","target":"morowali","type":"ownership","description":"Tsingshan leads IMIP Morowali industrial park"},
+    {"source":"huayou","target":"morowali","type":"jv","description":"Huayue HPAL (Huayou, Tsingshan, CMOC) at Morowali"},
+    {"source":"gem","target":"morowali","type":"jv","description":"QMB New Materials HPAL (Tsingshan, GEM, CATL, Hanwa)"},
+    {"source":"cmoc","target":"morowali","type":"jv","description":"CMOC holds stake in Huayue HPAL JV"},
+    {"source":"weda_bay","target":"nickel","type":"produces","description":"Nickel laterite"},
+    {"source":"sorowako","target":"nickel","type":"produces","description":"Nickel matte + MHP"},
+    {"source":"morowali","target":"nickel","type":"produces","description":"NPI, MHP, battery materials"},
+    {"source":"tsingshan","target":"nickel","type":"produces","description":"World's largest nickel/stainless producer"},
+    {"source":"indonesia","target":"nickel","type":"produces","description":"World's largest nickel producer/refiner"},
+    {"source":"indonesia","target":"tsingshan","type":"regulates","description":"2020 ore export ban forced downstream investment; nickel export value ~$6B (2013)→~$30B (2022)"},
+    {"source":"china","target":"gallium","type":"regulates","description":"Aug 2023 licensing; Dec 2024 US ban; Jan 2025 extraction-tech controls; ~99% global primary low-purity gallium (2024, USGS)"},
+    {"source":"china","target":"germanium","type":"regulates","description":"Aug 2023 licensing; Dec 2024 US ban"},
+    {"source":"china","target":"graphite","type":"regulates","description":"Oct/Dec 2023 export licensing for synthetic + flake graphite"},
+    {"source":"china","target":"ree","type":"regulates","description":"Dec 2023 processing-tech ban; Apr 2025 controls on 7 medium/heavy REEs; Oct 2025 extraterritorial rules (suspended Nov 2025)"},
+    {"source":"china","target":"antimony","type":"regulates","description":"Sep 2024 controls; Dec 2024 US ban; exports fell ~97%, prices ~tripled"},
+    {"source":"china","target":"dysprosium","type":"regulates","description":"Apr 2025 export controls on Dy/Tb and 5 other medium/heavy REEs"},
+    {"source":"china","target":"tungsten","type":"regulates","description":"Feb 2025 export controls (with tellurium, bismuth, molybdenum, indium)"},
+    {"source":"china","target":"lithium","type":"regulates","description":"Jul 2025 export licensing on lithium extraction/battery cathode tech"},
+    {"source":"usa","target":"china","type":"competes","description":"US semiconductor export controls vs China critical-mineral controls; Nov 2025 truce suspended some measures to Nov 2026"},
+    {"source":"usa","target":"graphite","type":"regulates","description":"IRA EV-credit sourcing rules; Treasury eased graphite until 2027"},
+    {"source":"eu","target":"ree","type":"regulates","description":"Critical Raw Materials Act 2024 strategic list & 2030 benchmarks"},
+    {"source":"bayan_obo","target":"ree","type":"produces","description":"World's largest REE source; NdPr dominant"},
+    {"source":"bayan_obo","target":"ndpr","type":"produces","description":"Primary global NdPr feedstock"},
+    {"source":"china_northern_re","target":"bayan_obo","type":"ownership","description":"Processes Bayan Obo concentrate (mined by Baotou Steel Union); ~37% held by Baogang"},
+    {"source":"china_northern_re","target":"ree","type":"produces","description":"World's largest REE producer by volume (light REE)"},
+    {"source":"china","target":"bayan_obo","type":"ownership","description":"State-owned Baogang Group controls Bayan Obo"},
+    {"source":"lynas","target":"mount_weld","type":"ownership","description":"Lynas owns/operates Mount Weld"},
+    {"source":"mount_weld","target":"ndpr","type":"produces","description":"NdPr concentrate; 106.6Mt resource, 32Mt reserve @ 6.44% TREO (Aug 2024)"},
+    {"source":"mount_weld","target":"dysprosium","type":"produces","description":"Heavy REE (Dy/Tb) reserves up 92% in 2024 update"},
+    {"source":"lynas","target":"ree","type":"produces","description":"Largest separated-REE producer outside China; ~7,200tpa NdPr expanding to 12,000tpa"},
+    {"source":"usa","target":"lynas","type":"offtake","description":"US DoD contracts for Lynas US heavy-REE processing facility (Texas)"},
+    {"source":"myanmar","target":"dysprosium","type":"produces","description":"~two-thirds of China's HREE (Dy/Tb) imports 2017-2024; ~31kt REE 2024"},
+    {"source":"kachin_ree","target":"dysprosium","type":"produces","description":"Ionic-clay Dy/Tb; KIA-controlled"},
+    {"source":"myanmar","target":"china","type":"supply","description":"Kachin REE concentrate exported to China (Yunnan); KIA 35,000 yuan/t + 20% levy"},
+    {"source":"escondida","target":"copper","type":"produces","description":"World's largest copper mine ~1.35Mtpa"},
+    {"source":"bhp","target":"escondida","type":"ownership","description":"BHP 57.5% operator"},
+    {"source":"rio_tinto","target":"escondida","type":"ownership","description":"Rio Tinto 30%"},
+    {"source":"grasberg","target":"copper","type":"produces","description":"Major Cu-Au; disrupted Sept 2025"},
+    {"source":"freeport","target":"grasberg","type":"ownership","description":"Freeport-McMoRan 48.8% of PT Freeport Indonesia"},
+    {"source":"mind_id","target":"grasberg","type":"ownership","description":"MIND ID 51.24% of PT Freeport Indonesia"},
+    {"source":"ivanhoe","target":"kamoa_kakula","type":"ownership","description":"Ivanhoe 39.6% (operator)"},
+    {"source":"zijin","target":"kamoa_kakula","type":"ownership","description":"Zijin 39.6% direct (44.45% economic incl. 13.59% Ivanhoe stake)"},
+    {"source":"drc","target":"kamoa_kakula","type":"ownership","description":"DRC government 20%"},
+    {"source":"kamoa_kakula","target":"copper","type":"produces","description":"Africa's largest, world's 3rd-largest copper mine"},
+    {"source":"zijin","target":"ivanhoe","type":"ownership","description":"Zijin ~13.59% of Ivanhoe (2nd-largest shareholder)"},
+    {"source":"chile","target":"copper","type":"produces","description":"~23% of global copper"},
+    {"source":"codelco","target":"copper","type":"produces","description":"Largest copper miner ~1.33Mt 2024"},
+    {"source":"bhp","target":"copper","type":"produces","description":"~1.86Mt 2025"},
+    {"source":"freeport","target":"copper","type":"produces","description":"Grasberg, Morenci, Cerro Verde"},
+    {"source":"anglo_american","target":"copper","type":"produces","description":"Copper in Chile/Peru"},
+    {"source":"jinchuan","target":"cobalt","type":"produces","description":"China's largest cobalt refiner; ~20% global demand"},
+    {"source":"erg","target":"cobalt","type":"produces","description":"Metalkol RTR tailings reprocessing"},
+    {"source":"huayou","target":"cobalt","type":"produces","description":"China's 2nd-largest cobalt producer"},
+    {"source":"nornickel","target":"nickel","type":"produces","description":"Leading refined nickel & palladium"},
+    {"source":"nornickel","target":"pgm","type":"produces","description":"Leading palladium producer"},
+    {"source":"sumitomo_mm","target":"nickel_asia","type":"ownership","description":"Sumitomo Metal Mining Philippine Holdings 26.04% of Nickel Asia"},
+    {"source":"nickel_asia","target":"taganito_mine","type":"ownership","description":"Taganito Mining Corp: NAC 65%, Pacific Metals 33.5%, Sojitz 1.5%"},
+    {"source":"nickel_asia","target":"rio_tuba","type":"ownership","description":"Rio Tuba Nickel Mining Corp (NAC 60%)"},
+    {"source":"nickel_asia","target":"taganito_hpal","type":"ownership","description":"NAC retains ~10% (was 22.5%) of Taganito HPAL"},
+    {"source":"sumitomo_mm","target":"taganito_hpal","type":"ownership","description":"Sumitomo Metal Mining 62.5%-75% of Taganito HPAL"},
+    {"source":"sumitomo_mm","target":"coral_bay_hpal","type":"ownership","description":"SMM 84.375%→100% (buying NAC's 15.625%, deal signed Feb 3 2025)"},
+    {"source":"nickel_asia","target":"coral_bay_hpal","type":"ownership","description":"NAC divesting 15.625% to Sumitomo; exiting HPAL business"},
+    {"source":"taganito_hpal","target":"nickel","type":"produces","description":"Ni/Co mixed sulfide (MSP)"},
+    {"source":"coral_bay_hpal","target":"nickel","type":"produces","description":"24,000t/yr Ni + 2,500t/yr Co mixed sulfide"},
+    {"source":"taganito_mine","target":"nickel","type":"produces","description":"Largest PH nickel mine ~70kt Ni content 2023"},
+    {"source":"rio_tuba","target":"nickel","type":"produces","description":"Saprolite/limonite ore; feeds Coral Bay"},
+    {"source":"nickel_asia","target":"nickel","type":"produces","description":"Philippines' largest nickel producer"},
+    {"source":"coral_bay_hpal","target":"japan","type":"supply","description":"Ni/Co mixed sulfide shipped to Japan for refining (SMM)"},
+    {"source":"taganito_hpal","target":"japan","type":"supply","description":"MSP to SMM's IRA-relevant nickel sulfate in Japan"},
+    {"source":"global_ferronickel","target":"cagdianao","type":"ownership","description":"PGMC (FNI subsidiary) operates Cagdianao (MPSA 007-92-X)"},
+    {"source":"global_ferronickel","target":"nickel","type":"produces","description":"2nd-largest PH nickel ore exporter; 5.448M WMT shipped 2024 (+15.5%)"},
+    {"source":"global_ferronickel","target":"china","type":"supply","description":"~93% of FNI 2024 revenue from China; 7% Indonesia"},
+    {"source":"global_ferronickel","target":"tsingshan","type":"ownership","description":"FNI holds 20% of Guangdong Century Tsingshan ferronickel smelter (China)"},
+    {"source":"cagdianao","target":"nickel","type":"produces","description":"Nickel laterite ore; ~61% of FNI 2024 shipment revenue"},
+    {"source":"sr_metals","target":"nickel","type":"produces","description":"Tubay (Agusan del Norte) nickel laterite; ~10.09Bn kg to China 2020-2024"},
+    {"source":"sr_metals","target":"china","type":"supply","description":"184 bulk shipments to Chinese buyers 2020-2024 (~$195M)"},
+    {"source":"marcventures","target":"nickel","type":"produces","description":"Surigao del Sur nickel laterite (MMDC, MPSA 016-93-XIII)"},
+    {"source":"marcventures","target":"china","type":"supply","description":"Main market China"},
+    {"source":"zambales_district","target":"nickel","type":"produces","description":"Luzon laterite; DMCI, Eramen, BenguetCorp"},
+    {"source":"surigao_dinagat_district","target":"nickel","type":"produces","description":"Dominant PH nickel district"},
+    {"source":"nickel_asia","target":"surigao_dinagat_district","type":"ownership","description":"Taganito, Cagdianao, Hinatuan mines"},
+    {"source":"philippines","target":"nickel","type":"produces","description":"World's 2nd-largest nickel ore producer; ~10.5% global 2024"},
+    {"source":"philippines","target":"china","type":"supply","description":"~35Mt of 44.97Mt WMT 2024 ore exports to China (>90% of China's imports)"},
+    {"source":"philippines","target":"indonesia","type":"supply","description":"~9.55Mt WMT 2024 ore to Indonesia (surged from 215kt 2023)"},
+    {"source":"philippines","target":"nickel_asia","type":"regulates","description":"MPSA/FTAA via DENR-MGB; proposed ore export ban (Senate Feb 2025) removed June 2025"},
+    {"source":"oceanagold","target":"didipio","type":"ownership","description":"OGPI 80% OceanaGold / 20% public (FTAA No. 001)"},
+    {"source":"didipio","target":"copper","type":"produces","description":"Cu-Au porphyry; 2nd-largest PH gold/copper producer"},
+    {"source":"sagittarius_mines","target":"tampakan","type":"ownership","description":"SMI (Tampakan Group/Zamora) develops Tampakan; Glencore exited 2015"},
+    {"source":"tampakan","target":"copper","type":"produces","description":"Undeveloped; 15Mt Cu + 17.6Moz Au; ~375ktpa Cu target"},
+    {"source":"philippines","target":"tampakan","type":"regulates","description":"FTAA + open-pit ban lifted 2021; targeting 2028 start"},
+    {"source":"tsmc","target":"gallium","type":"supply","description":"Fabs consume gallium (GaN/GaAs) exposed to China controls"},
+    {"source":"tsmc","target":"nvidia","type":"supply","description":"TSMC fabricates Nvidia AI GPUs"},
+    {"source":"asml","target":"tsmc","type":"supply","description":"ASML supplies EUV lithography to TSMC"},
+    {"source":"asml","target":"samsung_elec","type":"supply","description":"ASML supplies lithography to Samsung"},
+    {"source":"asml","target":"intel","type":"supply","description":"ASML supplies lithography to Intel"},
+    {"source":"gallium","target":"tsmc","type":"supply","description":"Gallium into compound semiconductors"},
+    {"source":"silicon","target":"tsmc","type":"supply","description":"Polysilicon/silicon wafers into chips"},
+    {"source":"catl","target":"byd","type":"competes","description":"Rival Chinese battery/EV makers"},
+    {"source":"cmoc","target":"glencore","type":"competes","description":"World's two largest cobalt producers"},
+    {"source":"bhp","target":"rio_tinto","type":"competes","description":"Rival majors (co-owners at Escondida)"},
+    {"source":"tianqi","target":"albemarle","type":"competes","description":"Rival lithium majors (co-owners at Greenbushes)"},
+    {"source":"lynas","target":"china_northern_re","type":"competes","description":"Western vs Chinese REE producers"},
+    {"source":"mp_materials","target":"lynas","type":"competes","description":"Leading non-China REE producers"},
+    {"source":"catl","target":"lg_energy","type":"competes","description":"Rival global battery makers"},
+    {"source":"lg_energy","target":"nickel","type":"supply","description":"Sources nickel/cathode precursors"},
+    {"source":"panasonic","target":"tesla","type":"supply","description":"Panasonic supplies battery cells to Tesla"},
+    {"source":"tesla","target":"lithium","type":"offtake","description":"Direct lithium offtake agreements"},
+    {"source":"gm","target":"lithium","type":"offtake","description":"Lithium/cathode offtakes for EV batteries"},
+    {"source":"umicore","target":"cobalt","type":"supply","description":"Western cathode/recycling; cobalt refining"},
+    {"source":"vale","target":"nickel","type":"produces","description":"Nickel, cobalt, copper"},
+    {"source":"rio_tinto","target":"lithium","type":"produces","description":"Acquired Arcadium Lithium; entering lithium"},
+    {"source":"iluka","target":"ree","type":"produces","description":"Building Eneabba REE refinery (Australia)"},
+    {"source":"northern_minerals","target":"dysprosium","type":"produces","description":"Browns Range HREE project (Dy/Tb)"},
+    {"source":"south_africa","target":"pgm","type":"produces","description":"World's dominant PGM producer"},
+    {"source":"south_africa","target":"manganese","type":"produces","description":"Major manganese reserves/production"},
+    {"source":"jinchuan","target":"pgm","type":"produces","description":"PGM refining"},
+    {"source":"samsung_sdi","target":"nickel","type":"supply","description":"Sources battery nickel/cathodes"},
+    {"source":"sk_on","target":"nickel","type":"supply","description":"Sources battery nickel/cathodes"},
+    {"source":"byd","target":"lithium","type":"supply","description":"LFP battery lithium sourcing; vertical integration"},
+    {"source":"canada","target":"germanium","type":"produces","description":"Teck refines germanium from Red Dog zinc concentrate"},
+    {"source":"russia","target":"antimony","type":"produces","description":"~18% of ex-China antimony supply"},
+    {"source":"new_caledonia","target":"nickel","type":"produces","description":"Goro/Prony nickel laterite"},
+    {"source":"argentina","target":"lithium","type":"produces","description":"Lithium Triangle brine"},
+    {"source":"gem","target":"nickel","type":"produces","description":"QMB Indonesia HPAL nickel/cobalt"},
+    {"source":"huayou","target":"nickel","type":"produces","description":"Indonesia HPAL (Huafei/Huayue) nickel/cobalt"},
+    {"source":"smic","target":"gallium","type":"supply","description":"Chinese foundry consuming compound-semiconductor inputs"}
   ]
 }

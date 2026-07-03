@@ -88,10 +88,10 @@
 
   function initSimulation() {
     simulation = d3.forceSimulation(nodes)
-      .force('link', d3.forceLink(links).id(function (d) { return d.id; }).distance(80).strength(0.1))
-      .force('charge', d3.forceManyBody().strength(-300))
+      .force('link', d3.forceLink(links).id(function (d) { return d.id; }).distance(60).strength(0.05))
+      .force('charge', d3.forceManyBody().strength(-200))
       .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collide', d3.forceCollide(30))
+      .force('collide', d3.forceCollide(25))
       .on('tick', ticked);
   }
 
@@ -118,7 +118,7 @@
       })
       .attr('r', function (d) {
         var deg = nodeDegree[d.id] || 0;
-        return Math.min(16, 5 + deg * 0.8);   // radius = 5 + degree*0.8, max 16
+        return Math.min(14, 4 + deg * 0.5);   // scaled by degree
       })
       .style('cursor', 'pointer');
 
@@ -127,11 +127,11 @@
       .data(nodes)
       .enter()
       .append('text')
-      .text(function (d) { return d.label; })
+      .text(function (d) { return d.name; })
       .attr('class', function (d) { return 'label label-' + d.type; })
       .attr('dx', function (d) {
         var deg = nodeDegree[d.id] || 0;
-        return Math.min(16, 5 + deg * 0.8) + 2;
+        return Math.min(14, 4 + deg * 0.5) + 2;
       })
       .attr('dy', '.35em');
 
@@ -227,23 +227,34 @@
     var content = document.getElementById('panel-content');
 
     // Build HTML for the panel
-    var html = '<h2>' + escapeHTML(d.label) + '</h2>';
+    var html = '<h2>' + escapeHTML(d.name) + '</h2>';
 
     // Type
     html += panelField('Type', capitalize(d.type));
 
-    // Segment (if present)
-    if (d.segment) {
-      html += panelField('Segment', capitalize(d.segment));
+    // Type-specific fields
+    if (d.type === 'country') {
+      if (d.role) html += panelField('Role', escapeHTML(d.role));
+      if (d.regulatory) html += panelField('Regulatory', escapeHTML(d.regulatory));
+      if (d.reserves) html += panelField('Reserves', escapeHTML(d.reserves));
+    } else if (d.type === 'company') {
+      if (d.hq) html += panelField('HQ', escapeHTML(d.hq));
+      if (d.minerals) html += panelField('Minerals', escapeHTML(d.minerals));
+      if (d.position) html += panelField('Position', escapeHTML(d.position));
+      if (d.ownership) html += panelField('Ownership', escapeHTML(d.ownership));
+      if (d.subsidiaries) html += panelField('Subsidiaries', escapeHTML(d.subsidiaries));
+    } else if (d.type === 'mineral') {
+      if (d.uses) html += panelField('Uses', escapeHTML(d.uses));
+      if (d.top_producers) html += panelField('Top Producers', escapeHTML(d.top_producers));
+      if (d.criticality) html += panelField('Criticality', escapeHTML(d.criticality));
+      if (d.concentration) html += panelField('Concentration', escapeHTML(d.concentration));
+    } else if (d.type === 'deposit') {
+      if (d.location) html += panelField('Location', escapeHTML(d.location));
+      if (d.size) html += panelField('Size', escapeHTML(d.size));
+      if (d.minerals) html += panelField('Minerals', escapeHTML(d.minerals));
+      if (d.operators) html += panelField('Operators', escapeHTML(d.operators));
+      if (d.production) html += panelField('Production', escapeHTML(d.production));
     }
-
-    // Country (if present)
-    if (d.country) {
-      html += panelField('Country', d.country);
-    }
-
-    // Description
-    html += panelField('Description', escapeHTML(d.description || ''));
 
     // Connections
     var connections = getConnections(d);
@@ -282,7 +293,7 @@
         var targetNode = nodes.find(function (n) { return n.id === t; });
         result.push({
           type: l.type,
-          targetLabel: targetNode ? targetNode.label : t,
+          targetLabel: targetNode ? targetNode.name : t,
           description: l.description || ''
         });
       } else if (t === node.id) {
@@ -290,7 +301,7 @@
         var sourceNode = nodes.find(function (n) { return n.id === s; });
         result.push({
           type: l.type,
-          targetLabel: sourceNode ? sourceNode.label : s,
+          targetLabel: sourceNode ? sourceNode.name : s,
           description: l.description || ''
         });
       }
@@ -527,7 +538,7 @@
     // Clear search state
     nodeSel.style('opacity', null).attr('r', function (d) {
       var deg = nodeDegree[d.id] || 0;
-      return Math.min(16, 5 + deg * 0.8); // restore original radius
+      return Math.min(14, 4 + deg * 0.5); // restore original radius
     });
     labelSel.style('opacity', null);
     linkSel.style('opacity', null);
@@ -540,7 +551,7 @@
 
     nodeSel.each(function (d) {
       // Only search visible (non-filtered) nodes
-      if (activeNodeTypes.has(d.type) && d.label.toLowerCase().includes(query)) {
+      if (activeNodeTypes.has(d.type) && d.name.toLowerCase().includes(query)) {
         matches.push(d);
       }
     });
@@ -554,7 +565,7 @@
     }).attr('r', function (d) {
       if (!activeNodeTypes.has(d.type)) return null;
       var deg = nodeDegree[d.id] || 0;
-      var baseR = Math.min(16, 5 + deg * 0.8);
+      var baseR = Math.min(14, 4 + deg * 0.5);
       return matchIds.has(d.id) ? baseR * 1.5 : baseR;
     });
 
