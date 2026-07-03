@@ -477,6 +477,7 @@ function buildSankey(){
   var skLinks=fl.map(function(l){
     var s=idOf(l.source),t=idOf(l.target);
     if(nm[s]===undefined||nm[t]===undefined)return null;
+    if(nm[s]===nm[t])return null; // skip self-loops (sankey forbids cycles)
     return {source:nm[s],target:nm[t],value:l.weight||5,type:l.type};
   }).filter(Boolean);
 
@@ -490,8 +491,22 @@ function buildSankey(){
 
   if(!skNodes.length||!skLinks.length){ skG.append('text').attr('x',w/2).attr('y',hh/2).attr('text-anchor','middle').attr('fill','#8b949e').text('No flow data'); return; }
 
-  var sankey=d3.sankey().nodeWidth(14).nodePadding(5).extent([[10,10],[w-110,hh-10]]);
-  var g2=sankey({nodes:skNodes.map(function(d){return Object.assign({},d);}),links:skLinks.map(function(d){return Object.assign({},d);})});
+  // Filter out reciprocal/cyclic pairs (d3-sankey requires DAG)
+  var seen = {};
+  var cleanLinks = skLinks.filter(function(l){
+    var key = Math.min(l.source,l.target)+'-'+Math.max(l.source,l.target);
+    if(seen[key]) return l.source < l.target; // keep only one direction
+    seen[key] = l;
+    return true;
+  });
+
+  try {
+    var sankey=d3.sankey().nodeWidth(14).nodePadding(5).extent([[10,10],[w-110,hh-10]]);
+    var g2=sankey({nodes:skNodes.map(function(d){return Object.assign({},d);}),links:cleanLinks.map(function(d){return Object.assign({},d);})});
+  } catch(e){
+    skG.append('text').attr('x',w/2).attr('y',hh/2).attr('text-anchor','middle').attr('fill','#f85149').text('Sankey error: '+e.message);
+    return;
+  }
 
   skG.append('g').selectAll('path').data(g2.links).enter().append('path')
     .attr('class','sankey-link').attr('d',d3.sankeyLinkHorizontal())
